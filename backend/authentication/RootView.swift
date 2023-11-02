@@ -17,9 +17,7 @@ struct RootView: View {
                 Text("Settings")
             }
         }
-        
         .onAppear(){
-            //
         }
         .fullScreenCover(isPresented: $signInView, content: {
             NavigationStack{

@@ -19,6 +19,16 @@ struct LoginView: View {
                     .background(Color.blue)
                     .cornerRadius(10.0)
             }
+            NavigationLink{
+                LoginEmail()
+            } label: {
+                Text("Create Account")
+                    .padding()
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(10.0)
+            }
         }
         .navigationTitle("Log In")
         .font(.headline)

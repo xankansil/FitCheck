@@ -1,43 +1,39 @@
 //
-//  LoginEmail.swift
+//  NewAccView.swift
 //  backend
 //
-//  Created by John S on 10/20/23.
+//  Created by John S on 10/31/23.
 //
 
 import SwiftUI
 import Firebase
 
 @MainActor
-final class LoginEmailVM: ObservableObject{
+final class NewAccVM: ObservableObject{
     @Published var email = ""
     @Published var password = ""
-    var userInfo: UserInfo!
     
-    func login(userInfo: UserInfo) {
+    func createUser() {
         guard !email.isEmpty, !password.isEmpty else {
             print("Enter a valid email address and password please")
             return
         }
-        self.userInfo = userInfo
+        
         Task{
             do {
                 let loginInfo = try await LoginManager.shared.createUser(email: email, pw: password)
                 print ("Success")
                 print(loginInfo)
-                userInfo.isLoggedIn = true
-                return
             } catch {
                 print("Error: \(error)")
-                return
             }
         }
     }
 }
 
-struct LoginEmail: View {
-    @EnvironmentObject var userInfo: UserInfo
-    @StateObject private var viewmodel = LoginEmailVM()
+struct CreateAcc: View {
+    
+    @StateObject private var viewmodel = NewAccVM()
     var body: some View {
         NavigationStack{
             TextField("Email: ", text: $viewmodel.email)
@@ -51,9 +47,9 @@ struct LoginEmail: View {
                 .cornerRadius(10.0)
                 .autocapitalization(.none)
             Button{
-                viewmodel.login(userInfo: userInfo)
+                viewmodel.createUser()
             } label: {
-                Text("Login")
+                Text("Create Account")
                     .padding()
                     .font(.headline)
                     .foregroundColor(.white)
@@ -61,12 +57,12 @@ struct LoginEmail: View {
                     .cornerRadius(10.0)
             }
         }
-        .navigationTitle("Login").padding()
+        .navigationTitle("Create Account").padding()
     }
 }
 
 #Preview {
     NavigationStack{
-        LoginEmail()
+        CreateAcc()
     }
 }
