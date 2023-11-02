@@ -22,7 +22,7 @@ final class LoginEmailVM: ObservableObject{
         self.userInfo = userInfo
         Task{
             do {
-                let loginInfo = try await LoginManager.shared.createUser(email: email, pw: password)
+                let loginInfo = try await LoginManager.shared.logIn(email: email, pw: password)
                 print ("Success")
                 print(loginInfo)
                 userInfo.isLoggedIn = true

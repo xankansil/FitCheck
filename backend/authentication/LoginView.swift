@@ -20,7 +20,7 @@ struct LoginView: View {
                     .cornerRadius(10.0)
             }
             NavigationLink{
-                LoginEmail()
+                CreateAcc()
             } label: {
                 Text("Create Account")
                     .padding()

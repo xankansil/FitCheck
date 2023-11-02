@@ -25,9 +25,15 @@ final class LoginManager {
     static let shared = LoginManager()
     private init(){ }
     
-    // Returning user information from the data structure
+    // Creating a new user and return user info
     func createUser(email: String, pw: String) async throws -> LoginData {
         let logDataRes = try await Auth.auth().createUser(withEmail: email, password: pw)
+        return LoginData(user: logDataRes.user)
+    }
+    
+    // Log in user and return user info
+    func logIn(email: String, pw: String) async throws -> LoginData {
+        let logDataRes = try await Auth.auth().signIn(withEmail: email, password: pw)
         return LoginData(user: logDataRes.user)
     }
 }
