@@ -12,7 +12,8 @@ struct TopView: View {
     
     var body: some View {
         if userInfo.isLoggedIn{
-            HomeView()
+//            HomeView()
+            ContentView()
         } else {
             NavigationStack{
                 LoginView()

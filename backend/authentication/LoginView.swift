@@ -6,6 +6,7 @@
 
 import SwiftUI
 
+// Page to allow user to create acc or login
 struct LoginView: View {
     var body: some View {
         VStack{

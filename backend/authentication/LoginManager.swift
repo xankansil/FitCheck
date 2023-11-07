@@ -28,7 +28,9 @@ final class LoginManager {
     // Creating a new user and return user info
     func createUser(email: String, pw: String) async throws -> LoginData {
         let logDataRes = try await Auth.auth().createUser(withEmail: email, password: pw)
-        return LoginData(user: logDataRes.user)
+        let loginData = LoginData(user: logDataRes.user)
+        try await UserManager.shared.createNewUser(loginData: loginData)
+        return loginData
     }
     
     // Log in user and return user info

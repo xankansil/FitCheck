@@ -14,6 +14,7 @@ final class LoginEmailVM: ObservableObject{
     @Published var password = ""
     var userInfo: UserInfo!
     
+    // Collects user login info and catches errors for invalid entries
     func login(userInfo: UserInfo) {
         guard !email.isEmpty, !password.isEmpty else {
             print("Enter a valid email address and password please")
@@ -35,6 +36,7 @@ final class LoginEmailVM: ObservableObject{
     }
 }
 
+// Page view for the login
 struct LoginEmail: View {
     @EnvironmentObject var userInfo: UserInfo
     @StateObject private var viewmodel = LoginEmailVM()

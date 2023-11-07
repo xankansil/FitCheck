@@ -12,18 +12,21 @@ import Firebase
 final class NewAccVM: ObservableObject{
     @Published var email = ""
     @Published var password = ""
+    var userInfo: UserInfo!
     
+    // Collects new user login info and catches invalid entries, does not login user after creation
     func createUser() {
         guard !email.isEmpty, !password.isEmpty else {
             print("Enter a valid email address and password please")
             return
         }
-        
+
         Task{
             do {
                 let loginInfo = try await LoginManager.shared.createUser(email: email, pw: password)
                 print ("Success")
                 print(loginInfo)
+                return
             } catch {
                 print("Error: \(error)")
             }
@@ -31,8 +34,8 @@ final class NewAccVM: ObservableObject{
     }
 }
 
+// Page view for account creation
 struct CreateAcc: View {
-    
     @StateObject private var viewmodel = NewAccVM()
     var body: some View {
         NavigationStack{
