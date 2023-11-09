@@ -39,6 +39,7 @@
 		733C7EF12AE1E03E00CAAAD0 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 733C7EF02AE1E03E00CAAAD0 /* FirebaseRemoteConfigSwift */; };
 		733C7EF32AE1E03E00CAAAD0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 733C7EF22AE1E03E00CAAAD0 /* FirebaseStorage */; };
 		733C7EF52AE1E03E00CAAAD0 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 733C7EF42AE1E03E00CAAAD0 /* FirebaseStorageCombine-Community */; };
+		734D9BDA2AFD3954003A39D9 /* Frontend in Resources */ = {isa = PBXBuildFile; fileRef = 734D9BD92AFD3954003A39D9 /* Frontend */; };
 		735FC4102AF3E9D700487DD3 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FC40F2AF3E9D700487DD3 /* UserInfo.swift */; };
 		735FC4122AF3EC7400487DD3 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FC4112AF3EC7400487DD3 /* TopView.swift */; };
 		737C7D9D2AF9E2AB00B67F0D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C7D9C2AF9E2AB00B67F0D /* UserManager.swift */; };
@@ -51,12 +52,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		733C7EAC2AE1DE7D00CAAAD0 /* backend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = backend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		733C7EAC2AE1DE7D00CAAAD0 /* FitCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733C7EAF2AE1DE7E00CAAAD0 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		733C7EB12AE1DE7E00CAAAD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		733C7EB32AE1DE7F00CAAAD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		733C7EB62AE1DE7F00CAAAD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		733C7EBD2AE1DFDD00CAAAD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		734D9BD42AFD30E3003A39D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		734D9BD92AFD3954003A39D9 /* Frontend */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frontend; sourceTree = "<group>"; };
 		735FC40F2AF3E9D700487DD3 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		735FC4112AF3EC7400487DD3 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		737C7D9C2AF9E2AB00B67F0D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -109,7 +112,8 @@
 		733C7EA32AE1DE7D00CAAAD0 = {
 			isa = PBXGroup;
 			children = (
-				733C7EAE2AE1DE7D00CAAAD0 /* backend */,
+				734D9BD92AFD3954003A39D9 /* Frontend */,
+				733C7EAE2AE1DE7D00CAAAD0 /* Backend */,
 				733C7EAD2AE1DE7D00CAAAD0 /* Products */,
 				737C7D9A2AF9E0C500B67F0D /* Frameworks */,
 			);
@@ -118,14 +122,15 @@
 		733C7EAD2AE1DE7D00CAAAD0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				733C7EAC2AE1DE7D00CAAAD0 /* backend.app */,
+				733C7EAC2AE1DE7D00CAAAD0 /* FitCheck.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		733C7EAE2AE1DE7D00CAAAD0 /* backend */ = {
+		733C7EAE2AE1DE7D00CAAAD0 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				734D9BD42AFD30E3003A39D9 /* Info.plist */,
 				737C7D9B2AF9E28600B67F0D /* Firestore */,
 				733C7EAF2AE1DE7E00CAAAD0 /* Database.swift */,
 				738DA4462AF15B490035117C /* HomeView.swift */,
@@ -137,7 +142,7 @@
 				735FC40F2AF3E9D700487DD3 /* UserInfo.swift */,
 				735FC4112AF3EC7400487DD3 /* TopView.swift */,
 			);
-			path = backend;
+			path = Backend;
 			sourceTree = "<group>";
 		};
 		733C7EB52AE1DE7F00CAAAD0 /* Preview Content */ = {
@@ -178,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		733C7EAB2AE1DE7D00CAAAD0 /* backend */ = {
+		733C7EAB2AE1DE7D00CAAAD0 /* FitCheck */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 733C7EBA2AE1DE7F00CAAAD0 /* Build configuration list for PBXNativeTarget "backend" */;
+			buildConfigurationList = 733C7EBA2AE1DE7F00CAAAD0 /* Build configuration list for PBXNativeTarget "FitCheck" */;
 			buildPhases = (
 				733C7EA82AE1DE7D00CAAAD0 /* Sources */,
 				733C7EA92AE1DE7D00CAAAD0 /* Frameworks */,
@@ -190,7 +195,7 @@
 			);
 			dependencies = (
 			);
-			name = backend;
+			name = FitCheck;
 			packageProductDependencies = (
 				733C7EC02AE1E03E00CAAAD0 /* FirebaseAnalytics */,
 				733C7EC22AE1E03E00CAAAD0 /* FirebaseAnalyticsOnDeviceConversion */,
@@ -221,7 +226,7 @@
 				733C7EF42AE1E03E00CAAAD0 /* FirebaseStorageCombine-Community */,
 			);
 			productName = backend;
-			productReference = 733C7EAC2AE1DE7D00CAAAD0 /* backend.app */;
+			productReference = 733C7EAC2AE1DE7D00CAAAD0 /* FitCheck.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -239,7 +244,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 733C7EA72AE1DE7D00CAAAD0 /* Build configuration list for PBXProject "backend" */;
+			buildConfigurationList = 733C7EA72AE1DE7D00CAAAD0 /* Build configuration list for PBXProject "FitCheck" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -255,7 +260,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				733C7EAB2AE1DE7D00CAAAD0 /* backend */,
+				733C7EAB2AE1DE7D00CAAAD0 /* FitCheck */,
 			);
 		};
 /* End PBXProject section */
@@ -265,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734D9BDA2AFD3954003A39D9 /* Frontend in Resources */,
 				733C7EB72AE1DE7F00CAAAD0 /* Preview Assets.xcassets in Resources */,
 				733C7EB42AE1DE7F00CAAAD0 /* Assets.xcassets in Resources */,
 				733C7EBE2AE1DFDD00CAAAD0 /* GoogleService-Info.plist in Resources */,
@@ -424,6 +430,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"backend/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = backend/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,6 +459,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"backend/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = backend/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -473,7 +481,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		733C7EA72AE1DE7D00CAAAD0 /* Build configuration list for PBXProject "backend" */ = {
+		733C7EA72AE1DE7D00CAAAD0 /* Build configuration list for PBXProject "FitCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				733C7EB82AE1DE7F00CAAAD0 /* Debug */,
@@ -482,7 +490,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		733C7EBA2AE1DE7F00CAAAD0 /* Build configuration list for PBXNativeTarget "backend" */ = {
+		733C7EBA2AE1DE7F00CAAAD0 /* Build configuration list for PBXNativeTarget "FitCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				733C7EBB2AE1DE7F00CAAAD0 /* Debug */,
