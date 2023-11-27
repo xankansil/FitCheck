@@ -15,12 +15,26 @@ struct TopView: View {
             .foregroundStyle(.indigo)
             .border(Color.white)
         
-        VStack(spacing: 20) {
-            Text("Tank Tops")
-            Text("Short Sleeve")
-            Text("Long Sleeves")
-            Text("Sweaters")
-            Text("Cardigans")
+        NavigationView{
+            VStack(spacing: 20) {
+                NavigationLink(destination: TankTopView()){
+                    Text("Tank Tops")
+                }
+                
+                NavigationLink(destination: ShortSleeveView()){
+                    Text("Short Sleeve")
+                }
+                
+                NavigationLink(destination: LongSleeveView()){
+                    Text("Long Sleeves")
+                }
+                NavigationLink(destination: SweaterView()){
+                    Text("Sweaters")
+                }
+                NavigationLink(destination: CardiganView()){
+                    Text("Cardigans")
+                }
+            }
         }
     }
 }

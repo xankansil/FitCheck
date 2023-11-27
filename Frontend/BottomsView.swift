@@ -6,6 +6,7 @@
 //
 
 
+
 import SwiftUI
 
 struct BottomsView: View {
@@ -15,12 +16,24 @@ struct BottomsView: View {
             .font(.system(size: 30))
             .foregroundStyle(.indigo)
             .border(Color.white)
-        VStack(spacing: 20) {
-            Text("Pants")
-            Text("Shorts")
-            Text("Long Skirts")
-            Text("Short Skirts")
-            Text("Jeans")
+        NavigationView{
+            VStack(spacing: 20) {
+                NavigationLink(destination: PantsView()){
+                    Text("Pants")
+                }
+                NavigationLink(destination: ShortsView()){
+                    Text("Shorts")
+                }
+                NavigationLink(destination: LongSkirtsView()){
+                    Text("Long Skirts")
+                }
+                NavigationLink(destination: ShortSkirtsView()){
+                    Text("Short Skirts")
+                }
+                NavigationLink(destination: TankTopView()){
+                    Text("Jeans")
+                }
+            }
         }
     }
 }
@@ -29,3 +42,4 @@ struct BottomsView: View {
 #Preview {
     BottomsView()
 }
+

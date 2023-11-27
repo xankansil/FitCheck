@@ -14,13 +14,19 @@ struct OuterWearView: View {
             .font(.system(size: 30))
             .foregroundStyle(.indigo)
             .border(Color.white)
-        VStack(spacing: 20) {
-            Text("Jackets")
-            Text("Coats")
-            Text("Vests")
-        
+        NavigationView{
+            VStack(spacing: 20) {
+                NavigationLink(destination: JacketsView()){
+                    Text("Jackets")
+                }
+                NavigationLink(destination: CoatsView()){
+                    Text("Coats")
+                }
+                NavigationLink(destination: VestsView()){
+                    Text("Vests")
+                }
+            }
         }
-        
     }
 }
 
@@ -28,3 +34,4 @@ struct OuterWearView: View {
 #Preview {
     OuterWearView()
 }
+

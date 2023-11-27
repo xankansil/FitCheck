@@ -5,6 +5,7 @@
 //  Created by Adalia Williams on 11/26/23.
 //
 
+
 import SwiftUI
 
 struct ShoesView: View {
@@ -15,10 +16,15 @@ struct ShoesView: View {
             .foregroundStyle(.indigo)
             .border(Color.white)
         
-        VStack(spacing: 20) {
-            Text("Sneakers")
-            Text("Dress Shoes")
-          
+        NavigationView{
+            VStack(spacing: 20) {
+                NavigationLink(destination: SneakersView()){
+                    Text("Sneakers")
+                }
+                NavigationLink(destination: DressShoesView()){
+                    Text("Dress Shoes")
+                }
+            }
         }
     }
 }
@@ -27,4 +33,5 @@ struct ShoesView: View {
 #Preview {
     ShoesView()
 }
+
 

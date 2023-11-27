@@ -6,6 +6,7 @@
 //
 
 
+
 import SwiftUI
 
 struct FullBodyView: View {
@@ -16,10 +17,15 @@ struct FullBodyView: View {
             .foregroundStyle(.indigo)
             .border(Color.white)
         
-        VStack(spacing: 20) {
-            Text("Jumpsuits")
-            Text("Dresses")
-            
+        NavigationView{
+            VStack(spacing: 20) {
+                NavigationLink(destination: JumpSuitView()) {
+                    Text("Jumpsuits")
+                }
+                NavigationLink(destination: DressesView()) {
+                    Text("Dresses")
+                }
+            }
         }
     }
 }
@@ -28,4 +34,6 @@ struct FullBodyView: View {
 #Preview {
     FullBodyView()
 }
+
+
 
