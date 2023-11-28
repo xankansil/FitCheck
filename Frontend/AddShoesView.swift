@@ -9,7 +9,7 @@ struct AddShoesView: View {
             .font(.system(size: 50))
             
         
-        NavigationView{
+        NavigationStack{
             VStack(spacing: 20) {
                 NavigationLink(destination: CameraView()){
                     Text("Sneakers")

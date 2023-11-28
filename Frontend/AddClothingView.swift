@@ -7,7 +7,7 @@ import SwiftUI
 
 struct AddClothingView: View {
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack(
                 spacing: 50
             ) {
