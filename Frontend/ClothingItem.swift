@@ -44,6 +44,7 @@ enum occasionType: String {
 
 
 class ClothingItem: ObservableObject {
+    var id: String
     var category: ClothingCategory
     var color: colors
     var occasion: occasionType
@@ -52,7 +53,8 @@ class ClothingItem: ObservableObject {
     var timesWorn: Int
     var mostRecWear: String
     
-    init(clCategory: ClothingCategory, clColor: colors, clOccasion: occasionType, clDateAdded: String, clWeather: String, clTimesWorn: Int, clMostRecWear: String){
+    init(dbID: String, clCategory: ClothingCategory, clColor: colors, clOccasion: occasionType, clDateAdded: String, clWeather: String, clTimesWorn: Int, clMostRecWear: String){
+        id = dbID
         category = clCategory
         color = clColor
         occasion = clOccasion

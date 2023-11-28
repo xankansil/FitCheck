@@ -8,6 +8,7 @@
 import SwiftUI
 
 class Outfit: ObservableObject {
+    var id: String
     var fitPieces: Array <ClothingItem>
     var label: String
     var occasion: occasionType
@@ -16,7 +17,8 @@ class Outfit: ObservableObject {
     var fitColors: Array <colors>
     
     
-    init(outfitPieces: Array <ClothingItem>, fitLabel: String, fitOccasion: occasionType, fitFav: Bool, fitMostRecWear: String, outfitColors: Array <colors>){
+    init(dbID: String, outfitPieces: Array <ClothingItem>, fitLabel: String, fitOccasion: occasionType, fitFav: Bool, fitMostRecWear: String, outfitColors: Array <colors>){
+        id = dbID
         fitPieces = outfitPieces
         label = fitLabel
         occasion = fitOccasion

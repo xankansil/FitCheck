@@ -130,8 +130,8 @@
 		733C7EAE2AE1DE7D00CAAAD0 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				737C7D9C2AF9E2AB00B67F0D /* UserManager.swift */,
 				734D9BD42AFD30E3003A39D9 /* Info.plist */,
-				737C7D9B2AF9E28600B67F0D /* Firestore */,
 				733C7EAF2AE1DE7E00CAAAD0 /* Database.swift */,
 				738DA4462AF15B490035117C /* HomeView.swift */,
 				73F9BE352AE316CC00E59C25 /* authentication */,
@@ -158,14 +158,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		737C7D9B2AF9E28600B67F0D /* Firestore */ = {
-			isa = PBXGroup;
-			children = (
-				737C7D9C2AF9E2AB00B67F0D /* UserManager.swift */,
-			);
-			path = Firestore;
 			sourceTree = "<group>";
 		};
 		73F9BE352AE316CC00E59C25 /* authentication */ = {
