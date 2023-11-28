@@ -1,8 +1,5 @@
 //
 //  AddClothingView.swift
-//  backend
-//
-//  Created by Corinna Plefka on 11/5/23.
 //
 //This view will allow the user to take pictures and add clothing to the database/ their closet
 
@@ -10,7 +7,29 @@ import SwiftUI
 
 struct AddClothingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack(
+                spacing: 50
+            ) {
+                NavigationLink(destination: AddTopView()){
+                    Text("ADD TOPS")
+                }
+                NavigationLink(destination: AddBottomsView()){
+                    Text("ADD BOTTOMS")
+                }
+                NavigationLink(destination: AddFullBodyView()){
+                    Text("ADD FULL BODY")
+                }
+                NavigationLink(destination: AddOuterwearView()){
+                    Text("ADD OUTERWEAR")
+                }
+                NavigationLink(destination: AddShoesView()){
+                    Text("ADD SHOES")
+                }
+            }
+            .navigationTitle("Add Clothing")
+            
+        }
     }
 }
 
