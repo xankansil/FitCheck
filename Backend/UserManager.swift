@@ -766,7 +766,7 @@ final class UserManager {
         try await Firestore.firestore().collection("users").document(userID).delete()
         
         // Delete the user from the authentication server
-        // TODO: get johhhn
+//        Auth.auth()
         
         // Return user to the login screen
         // TODO: get frontend peopleee
