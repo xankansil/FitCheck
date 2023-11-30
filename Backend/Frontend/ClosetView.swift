@@ -28,7 +28,7 @@ struct ClosetView: View {
                     ) {
                         //make the button in a navigation link
                         
-                        NavigationLink(destination: TopView()){
+                        NavigationLink(destination: TopsView()){
                             Text("TOPS")
                         }
                         

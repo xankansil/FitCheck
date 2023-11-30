@@ -1,7 +1,7 @@
 //
 //  MainView.swift
 //  FitCheck
-/Users/adaliawilliams/Desktop/WebDev/finalProj/mywork/Closet/Closet/Views//
+//  Users/adaliawilliams/Desktop/WebDev/finalProj/mywork/Closet/Closet/Views//
 //  Created by Corinna Plefka on 11/5/23.
 //
 

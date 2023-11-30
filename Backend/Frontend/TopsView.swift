@@ -1,5 +1,5 @@
 //
-//  TopView.swift
+//  TopsView.swift
 //  ClosetView
 //
 //  Created by Adalia Williams on 11/26/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopView: View {
+struct TopsView: View {
 
     var body: some View {
         Text("Tops")
@@ -41,6 +41,6 @@ struct TopView: View {
 
 
 #Preview {
-    TopView()
+    TopsView()
 }
 

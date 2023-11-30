@@ -47,19 +47,22 @@
 // TODO: edit createUser to use the proper userdata struct  (DONE!)
 // TODO: standardize confusing loginInfo / userManager userID struct discrepancies within UserManager   (DONE!)
 // TODO: successfully read userdata into proper app-usable struct   (DONE!)
+// TODO: Add favorite bool to clothingItem  (DONE!)
 
 // In-Progress
+// TODO: add img_url fields to all structs
 // TODO: deleteUser function and deleteAllUsers that works for both firestore and authentication database (john help pls)
 // TODO: make it so deleteUser sets you back to the login view (frontend help pls)
 
 // Next
+// TODO: get rid of obsolete stuff in the dummydata method to avoid confusion
+
+// Upcoming
 // TODO: IMAGE STORAGE on firebase as part of a clothing item / outfit. (requires creation of a new database)
 // TODO: Investigate this and official docs https://www.youtube.com/watch?v=sTiD8a9sBWw
 // TODO: Successfully store photos on database
 // TODO: Add img_path optional fields to all three structs: user (profile pic), clothing item and outfit (social media)
 // TODO: Delete calls successfully also remove images from the storage database
-
-// Upcoming
 
 // Important but save for later
 // TODO: remove front end versions of duplicate clothing + outfit structs (located in frontend files)
@@ -86,6 +89,7 @@
  -Examples below; see "createDummyData" function for more examples!
  
  // Getting clothing items based on query
+ let closetRef = closetRef(userID: userID)
  let clothingQuery = closetRef.whereField("color", isEqualTo: "red")
  let justReds = try await getClothingItems(userID: userID, query: clothingQuery)
  
@@ -218,6 +222,7 @@ public struct ClothingItem: Codable {
     let date_added: Date?
     var most_rec_wear: Date?
     var times_worn: Int64?
+    var favorite: Bool?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -229,6 +234,7 @@ public struct ClothingItem: Codable {
         case date_added
         case most_rec_wear
         case times_worn
+        case favorite
     }
 }
 
@@ -292,7 +298,8 @@ final class UserManager {
             weather: WeatherType.winter,
             date_added: Date(),
             most_rec_wear: Date(),
-            times_worn: 0)
+            times_worn: 0,
+            favorite: false)
         
         let dummyItem2 = ClothingItem(
             id: "tempID",
@@ -303,7 +310,8 @@ final class UserManager {
             weather: WeatherType.summer,
             date_added: Date(),
             most_rec_wear: Date(),
-            times_worn: 0)
+            times_worn: 0,
+            favorite: false)
         
         let dummyItem3 = ClothingItem(
             id: "tempID",
@@ -314,7 +322,8 @@ final class UserManager {
             weather: WeatherType.winter,
             date_added: Date(),
             most_rec_wear: Date(),
-            times_worn: 0)
+            times_worn: 0,
+            favorite: false)
         
         let dummyItem4 = ClothingItem(
             id: "tempID",
@@ -325,7 +334,8 @@ final class UserManager {
             weather: WeatherType.winter,
             date_added: Date(),
             most_rec_wear: Date(),
-            times_worn: 1)
+            times_worn: 1,
+            favorite: false)
         
         // Add items per their data
         try closetRef.addDocument(from: dummyItem1)
@@ -352,7 +362,8 @@ final class UserManager {
             weather: WeatherType.winter,
             date_added: Date(),
             most_rec_wear: Date(),
-            times_worn: 1)
+            times_worn: 1,
+            favorite: false)
         try await addClothingItem(userID: userID, clothingData: dummyItem5)
         
         // Using one-line, field-based version (best practice as there is no need to supply "tempID")
@@ -364,7 +375,8 @@ final class UserManager {
                                                     weather: WeatherType.winter,
                                                     dateAdded: Date(),
                                                     mostRecWear: Date(),
-                                                    timesWorn: 10)
+                                                    timesWorn: 10,
+                                                    favorite: true)
         
         // Testing queries on clothingItems
         let clothingQuery = closetRef.whereField("color", isEqualTo: "red")
@@ -629,7 +641,7 @@ final class UserManager {
     
     // Adds a new clothingItem, taking optional values for the fields to be used (best practice, as no need to supply item id!)
     // Returns the struct of the item added
-    func addClothingItem(userID: String, color: ColorType?, category: CategoryType?, clothing: ClothingType?, occasion: OccasionType?, weather: WeatherType?, dateAdded: Date?, mostRecWear: Date?, timesWorn: Int64?) async throws -> ClothingItem? {
+    func addClothingItem(userID: String, color: ColorType?, category: CategoryType?, clothing: ClothingType?, occasion: OccasionType?, weather: WeatherType?, dateAdded: Date?, mostRecWear: Date?, timesWorn: Int64?, favorite: Bool?) async throws -> ClothingItem? {
         // Convert given fields into a proper ClothingItem struct
         var clothingData = ClothingItem(id: "tempID",
                                         color: color,
@@ -639,7 +651,8 @@ final class UserManager {
                                         weather: weather,
                                         date_added: dateAdded,
                                         most_rec_wear: mostRecWear,
-                                        times_worn: timesWorn)
+                                        times_worn: timesWorn,
+                                        favorite: favorite)
         
         // Add the new clothing item to the database
         let closetRef = closetRef(userID: userID)
