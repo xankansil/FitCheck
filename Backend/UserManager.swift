@@ -51,6 +51,7 @@
 
 // In-Progress
 // TODO: add img_url fields to all structs
+// TODO: favorite clothes and favorite shoes in profile
 // TODO: deleteUser function and deleteAllUsers that works for both firestore and authentication database (john help pls)
 // TODO: make it so deleteUser sets you back to the login view (frontend help pls)
 
@@ -223,6 +224,7 @@ public struct ClothingItem: Codable {
     var most_rec_wear: Date?
     var times_worn: Int64?
     var favorite: Bool?
+    var img_url: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -235,6 +237,7 @@ public struct ClothingItem: Codable {
         case most_rec_wear
         case times_worn
         case favorite
+        case img_url
     }
 }
 
@@ -247,6 +250,7 @@ public struct Outfit: Codable {
     var favorite: Bool?
     let date_added: Date?
     var most_rec_wear: Date?
+    var img_url: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -257,6 +261,7 @@ public struct Outfit: Codable {
         case favorite
         case date_added
         case most_rec_wear
+        case img_url
     }
 }
 
@@ -264,11 +269,15 @@ public struct UserData: Codable {
     let id: String?
     let email: String?
     let date_created: Date?
+    var img_url: String?
+    var name: String?
+    var favorite_season: WeatherType?
     
     enum CodingKeys: String, CodingKey {
         case id
         case email
         case date_created
+        case img_url
     }
 }
 
@@ -284,73 +293,73 @@ final class UserManager {
     
     // Examples for creating data for a new user
     func createDummyData(userID: String) async throws {
+//        // Use "tempID" so that we can track it down to give each item a proper id (auto-generated from firestore)
+//        let dummyItem1 = ClothingItem(
+//            id: "tempID",
+//            color: ColorType.black,
+//            category: CategoryType.fullbody,
+//            clothing: ClothingType.dress,
+//            occasion: OccasionType.casual,
+//            weather: WeatherType.winter,
+//            date_added: Date(),
+//            most_rec_wear: Date(),
+//            times_worn: 0,
+//            favorite: false)
+//        
+//        let dummyItem2 = ClothingItem(
+//            id: "tempID",
+//            color: ColorType.red,
+//            category: CategoryType.accessory,
+//            clothing: ClothingType.hat,
+//            occasion: OccasionType.party,
+//            weather: WeatherType.summer,
+//            date_added: Date(),
+//            most_rec_wear: Date(),
+//            times_worn: 0,
+//            favorite: false)
+//        
+//        let dummyItem3 = ClothingItem(
+//            id: "tempID",
+//            color: ColorType.red,
+//            category: CategoryType.fullbody,
+//            clothing: ClothingType.dress,
+//            occasion: OccasionType.casual,
+//            weather: WeatherType.winter,
+//            date_added: Date(),
+//            most_rec_wear: Date(),
+//            times_worn: 0,
+//            favorite: false)
+//        
+//        let dummyItem4 = ClothingItem(
+//            id: "tempID",
+//            color: ColorType.blue,
+//            category: CategoryType.fullbody,
+//            clothing: ClothingType.dress,
+//            occasion: OccasionType.casual,
+//            weather: WeatherType.winter,
+//            date_added: Date(),
+//            most_rec_wear: Date(),
+//            times_worn: 1,
+//            favorite: false)
+//        
+//        // Add items per their data
+//        try closetRef.addDocument(from: dummyItem1)
+//        try closetRef.addDocument(from: dummyItem2)
+//        try closetRef.addDocument(from: dummyItem3)
+//        try closetRef.addDocument(from: dummyItem4)
+//        
+//        // Update the clothingIDs to be their real, firestore-given ids
+//        let closet = try await Firestore.firestore().collection("users").document(userID).collection("closet").whereField("id", isEqualTo: "tempID").getDocuments()
+//        for document in closet.documents {
+//            if document == document {
+//                let realID = document.documentID
+//                try await document.reference.updateData(["id" : realID])
+//            }
+//        }
+        
         // First get a reference to the closet / outfits for later use with queries
         let closetRef = closetRef(userID: userID)
         let outfitsRef = outfitsRef(userID: userID)
-        
-        // Use "tempID" so that we can track it down to give each item a proper id (auto-generated from firestore)
-        let dummyItem1 = ClothingItem(
-            id: "tempID",
-            color: ColorType.black,
-            category: CategoryType.fullbody,
-            clothing: ClothingType.dress,
-            occasion: OccasionType.casual,
-            weather: WeatherType.winter,
-            date_added: Date(),
-            most_rec_wear: Date(),
-            times_worn: 0,
-            favorite: false)
-        
-        let dummyItem2 = ClothingItem(
-            id: "tempID",
-            color: ColorType.red,
-            category: CategoryType.accessory,
-            clothing: ClothingType.hat,
-            occasion: OccasionType.party,
-            weather: WeatherType.summer,
-            date_added: Date(),
-            most_rec_wear: Date(),
-            times_worn: 0,
-            favorite: false)
-        
-        let dummyItem3 = ClothingItem(
-            id: "tempID",
-            color: ColorType.red,
-            category: CategoryType.fullbody,
-            clothing: ClothingType.dress,
-            occasion: OccasionType.casual,
-            weather: WeatherType.winter,
-            date_added: Date(),
-            most_rec_wear: Date(),
-            times_worn: 0,
-            favorite: false)
-        
-        let dummyItem4 = ClothingItem(
-            id: "tempID",
-            color: ColorType.blue,
-            category: CategoryType.fullbody,
-            clothing: ClothingType.dress,
-            occasion: OccasionType.casual,
-            weather: WeatherType.winter,
-            date_added: Date(),
-            most_rec_wear: Date(),
-            times_worn: 1,
-            favorite: false)
-        
-        // Add items per their data
-        try closetRef.addDocument(from: dummyItem1)
-        try closetRef.addDocument(from: dummyItem2)
-        try closetRef.addDocument(from: dummyItem3)
-        try closetRef.addDocument(from: dummyItem4)
-        
-        // Update the clothingIDs to be their real, firestore-given ids
-        let closet = try await Firestore.firestore().collection("users").document(userID).collection("closet").whereField("id", isEqualTo: "tempID").getDocuments()
-        for document in closet.documents {
-            if document == document {
-                let realID = document.documentID
-                try await document.reference.updateData(["id" : realID])
-            }
-        }
         
         // Using explicit "addClothingItem" function (automatically generates appropriate IDs, still needs "tempID")
         let dummyItem5 = ClothingItem(

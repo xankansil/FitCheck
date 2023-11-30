@@ -55,7 +55,7 @@ struct CreateOutfitView: View {
                         NavigationLink(destination: FullBodyView()){
                             Text("FULL BODY")
                         }
-                        NavigationLink(destination: OuterwearView()){
+                        NavigationLink(destination: OuterWearView()){
                             Text("OUTERWEAR")
                         }
                         NavigationLink(destination: ShoesView()){

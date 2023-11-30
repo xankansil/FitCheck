@@ -264,7 +264,7 @@
 				734D9BD42AFD30E3003A39D9 /* Info.plist */,
 				733C7EAF2AE1DE7E00CAAAD0 /* Database.swift */,
 				738DA4462AF15B490035117C /* HomeView.swift */,
-				73F9BE352AE316CC00E59C25 /* authentication */,
+				73F9BE352AE316CC00E59C25 /* Authentication */,
 				733C7EB12AE1DE7E00CAAAD0 /* ContentView.swift */,
 				733C7EBD2AE1DFDD00CAAAD0 /* GoogleService-Info.plist */,
 				733C7EB32AE1DE7F00CAAAD0 /* Assets.xcassets */,
@@ -290,7 +290,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		73F9BE352AE316CC00E59C25 /* authentication */ = {
+		73F9BE352AE316CC00E59C25 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				73F9BE362AE316F200E59C25 /* LoginView.swift */,
@@ -299,7 +299,7 @@
 				73F9BE3E2AE3278D00E59C25 /* RootView.swift */,
 				738DA4482AF16D400035117C /* CreateAcc.swift */,
 			);
-			path = authentication;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
