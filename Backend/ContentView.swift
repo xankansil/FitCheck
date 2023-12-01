@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var ClothingObject: ClothingObject
+    @StateObject var closet = ClothingObject()
     var body: some View {
         NavigationView {
             LazyHStack {
