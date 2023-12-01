@@ -30,6 +30,7 @@ struct ClosetView: View {
                         
                         NavigationLink(destination: TopsView()){
                             Text("TOPS")
+                            
                         }
                         
                         

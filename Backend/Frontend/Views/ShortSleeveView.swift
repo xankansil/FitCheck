@@ -14,6 +14,9 @@ struct ShortSleeveView: View {
             .font(.system(size: 30))
             .foregroundStyle(.indigo)
             .border(Color.white)
+        var ShortSleeves = ClothingObject.clothing.shortsleeve
+        VStack{
+        }
     }
 }
 

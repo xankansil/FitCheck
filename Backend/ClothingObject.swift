@@ -38,4 +38,50 @@ class ClothingObject: ObservableObject{
         self.isLoggedIn = true //must be true to create have clothing objects
         self.userName = ""
     }
+    
+    func getID() -> String{
+        return self.id!
+    }
+    
+    func getColor() -> ColorType {
+        return self.color!
+    }
+    
+    func getCategory() -> CategoryType {
+        return self.category!
+    }
+    
+    func getClothingType() -> ClothingType {
+        return self.clothing!
+    }
+    
+    func getOccasion() -> OccasionType {
+        return self.occasion!
+    }
+    
+    func getWeather() -> WeatherType {
+        return self.weather!
+    }
+    
+    func getDateAdded() -> Date {
+        return self.date_added!
+    }
+    
+    func getRecentWornDate() -> Date {
+        return self.most_rec_wear!
+    }
+    
+    func getTimesWorn() -> Int64 {
+        return self.times_worn!
+    }
+    
+    func getFavorite() -> Bool {
+        return self.favorite!
+    }
+    
+    func getImgURL() -> String {
+        return self.img_url!
+    }
+    
+    
 }
