@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    //closet being created in mainview as this called all naviagtion views
+    @EnvironmentObject var closet: ClothingObject
     var body: some View {
         TabView {
 //            HomeView()

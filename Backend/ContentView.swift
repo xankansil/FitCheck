@@ -7,7 +7,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var closet = ClothingObject()
+    //this envirnmental object is being initiallized in Clothing Object, this variable is an array with the name closet
+   
     var body: some View {
         NavigationView {
             LazyHStack {

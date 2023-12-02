@@ -8,14 +8,15 @@
 import Foundation
 
 
+
 class ClothingObject: ObservableObject{
-    class ClothingObject: ObservableObject{
-        @Published var closet = [ClothingItem]()
-       
-        init() {
-            closet = []
-        }
+    @Published var closetObject = [ClothingItem]()
+        
+    init() {
+            closetObject = []
     }
+}
+
     
     
     
