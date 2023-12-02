@@ -7,8 +7,9 @@
 
 import SwiftUI
 
+
 struct ShortSleeveView: View {
-    
+    @StateObject var closet = ClothingObject()
     var body: some View {
         Text("Short Sleeves")
             .font(.system(size: 30))
