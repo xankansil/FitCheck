@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddTopView: View {
     @State private var tops = [ClothingItem]()
+    @EnvironmentObject var newClothingItem : ClothingObject
+
     
     var body: some View {
         // TODO: Testing, can remove
@@ -65,6 +67,8 @@ struct AddTopView: View {
                     Text("Cardigans")
                 }
             }
+        }.task {
+            newClothingItem.closetObject.category = CategoryType.fullbody
         }
     }
 }

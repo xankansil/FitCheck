@@ -3,6 +3,8 @@
 import SwiftUI
 
 struct AddShoesView: View {
+    @EnvironmentObject var newClothingItem : ClothingObject
+
 
     var body: some View {
         Text("Add Shoes")
@@ -24,6 +26,8 @@ struct AddShoesView: View {
                     Text("Sandals")
                 }
             }
+        }.task {
+            newClothingItem.closetObject.category = CategoryType.fullbody
         }
     }
 }
