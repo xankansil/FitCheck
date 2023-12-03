@@ -20,7 +20,7 @@ struct ClosetView: View {
                 .foregroundStyle(.indigo)
                 .border(Color.white)
             
-            NavigationView{
+            NavigationStack{
                 VStack(spacing: 180)
                 {
                     HStack(
