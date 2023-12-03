@@ -169,31 +169,39 @@ public enum CategoryType: String, Codable {
 }
 
 public enum ClothingType: String, Codable {
-    
     // Tops
     case tanktop
     case shortsleeve
     case longsleeve
     case sweater
-    case sweatshirt
     case cardigan
-    case jacket
+    
     
     // Bottoms
     case pants
     case shorts
-    case skirt
+    case longskirt
+    case shortskirt
+    case jeans
+    
     
     // Fullbody
     case dress
+    case jumpsuit
     
     // Outerwear
+    case jacket
+    case sweatshirt
+    case coat
+    case vests
     
     // Accessories
     case hat
+    case scarf
     
     // Shoes
-    case shoes
+    case dressshoes
+    case sneakers
 }
 
 public enum OccasionType: String, Codable {
@@ -241,7 +249,6 @@ public struct ClothingItem: Codable, Hashable{
         case favorite
         case img_url
     }
-    
 }
 
 public struct Outfit: Codable {

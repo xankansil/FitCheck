@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E3B691F2B1A6C4700847BB4 /* ClothingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */; };
+		421C7D262B1D02B700B1143D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C7D252B1D02B600B1143D /* FeedView.swift */; };
 		732409AF2B18EBEF0056CA5D /* AddOuterwearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099A2B18EBEF0056CA5D /* AddOuterwearView.swift */; };
 		732409B12B18EBEF0056CA5D /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099C2B18EBEF0056CA5D /* SUImagePickerView.swift */; };
 		732409B22B18EBEF0056CA5D /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099D2B18EBEF0056CA5D /* CameraView.swift */; };
@@ -90,6 +92,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingObject.swift; sourceTree = "<group>"; };
+		421C7D252B1D02B600B1143D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		7324099A2B18EBEF0056CA5D /* AddOuterwearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOuterwearView.swift; sourceTree = "<group>"; };
 		7324099C2B18EBEF0056CA5D /* SUImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
 		7324099D2B18EBEF0056CA5D /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				732409AC2B18EBEF0056CA5D /* FitCheckApp.swift */,
 				732409A52B18EBEF0056CA5D /* FullBodyView.swift */,
 				732409A72B18EBEF0056CA5D /* MainView.swift */,
+				421C7D252B1D02B600B1143D /* FeedView.swift */,
 				7324099F2B18EBEF0056CA5D /* OuterWearView.swift */,
 				732409A62B18EBEF0056CA5D /* ShoesView.swift */,
 				7324099C2B18EBEF0056CA5D /* SUImagePickerView.swift */,
@@ -270,6 +275,7 @@
 				733C7EB32AE1DE7F00CAAAD0 /* Assets.xcassets */,
 				733C7EB52AE1DE7F00CAAAD0 /* Preview Content */,
 				735FC40F2AF3E9D700487DD3 /* UserInfo.swift */,
+				0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */,
 				735FC4112AF3EC7400487DD3 /* TopView.swift */,
 			);
 			path = Backend;
@@ -420,6 +426,7 @@
 				73F9BE392AE31AF500E59C25 /* LoginEmail.swift in Sources */,
 				732409DA2B18EC1E0056CA5D /* SneakersView.swift in Sources */,
 				732409BE2B18EBEF0056CA5D /* AddFullBodyView.swift in Sources */,
+				0E3B691F2B1A6C4700847BB4 /* ClothingObject.swift in Sources */,
 				732409C12B18EBEF0056CA5D /* FitCheckApp.swift in Sources */,
 				732409B22B18EBEF0056CA5D /* CameraView.swift in Sources */,
 				732409E12B18EC1E0056CA5D /* JeansView.swift in Sources */,
@@ -440,6 +447,7 @@
 				732409B42B18EBEF0056CA5D /* OuterWearView.swift in Sources */,
 				732409E42B18EC1E0056CA5D /* LongSleeveView.swift in Sources */,
 				732409EA2B18EC1E0056CA5D /* VestsView.swift in Sources */,
+				421C7D262B1D02B700B1143D /* FeedView.swift in Sources */,
 				732409C02B18EBEF0056CA5D /* AddShoesView.swift in Sources */,
 				732409C22B18EBEF0056CA5D /* TopsView.swift in Sources */,
 				732409E62B18EC1E0056CA5D /* SweaterView.swift in Sources */,

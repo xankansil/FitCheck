@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct MainView: View {
+    //closet being created in mainview as this called all naviagtion views
+    //this envirnmental object is being initiallized in Clothing Object, this variable is an array with the name closet
+    @EnvironmentObject var closet: ClothingObject
     var body: some View {
         TabView {
-//            HomeView()
-//                .tabItem {
-//                    Label("Home", systemImage: "house.fill")
-//                }
+            FeedView()
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
 
             AddClothingView()
                 .tabItem {
