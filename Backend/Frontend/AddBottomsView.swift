@@ -11,16 +11,16 @@ struct AddBottomsView: View {
         
         NavigationStack{
             VStack(spacing: 20) {
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Pants")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Shorts")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Short Skirts")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Long Skirts")
                 }
             }

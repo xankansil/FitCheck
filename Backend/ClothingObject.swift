@@ -10,10 +10,10 @@ import Foundation
 
 
 class ClothingObject: ObservableObject{
-    @Published var closetObject = [ClothingItem]()
+    @Published var closetObject : ClothingItem
         
-    init() {
-            closetObject = []
+    init(closetObject: ClothingItem) {
+        self.closetObject = closetObject
     }
 }
 

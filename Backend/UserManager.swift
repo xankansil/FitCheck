@@ -156,6 +156,7 @@ public enum ColorType: String, Codable {
     case white
     case pink
     case multicolor
+    case brown
 }
 
 public enum CategoryType: String, Codable {
@@ -224,12 +225,12 @@ public enum WeatherType: String, Codable {
 
 public struct ClothingItem: Codable {
     var id: String?
-    let color: ColorType?
-    let category: CategoryType?
-    let clothing: ClothingType?
-    let occasion: OccasionType?
-    let weather: WeatherType?
-    let date_added: Date?
+    var color: ColorType?
+    var category: CategoryType?
+    var clothing: ClothingType?
+    var occasion: OccasionType?
+    var weather: WeatherType?
+    var date_added: Date?
     var most_rec_wear: Date?
     var times_worn: Int64?
     var favorite: Bool?
@@ -252,12 +253,12 @@ public struct ClothingItem: Codable {
 
 public struct Outfit: Codable {
     var id: String?
-    let label: String?
+    var label: String?
     var fit_pieces: Array<String>?
     var fit_colors: Array<ColorType>?
-    let occasion: OccasionType?
+    var occasion: OccasionType?
     var favorite: Bool?
-    let date_added: Date?
+    var date_added: Date?
     var most_rec_wear: Date?
     var img_url: String?
     

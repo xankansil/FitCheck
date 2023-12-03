@@ -11,13 +11,13 @@ struct AddFullBodyView: View {
         
         NavigationStack{
             VStack(spacing: 20) {
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Dresses")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Overalls")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Jumpsuits")
                 }
             }

@@ -10,13 +10,13 @@ struct AddOuterwearView: View {
         
         NavigationStack{
             VStack(spacing: 20) {
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Jackets")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Coats")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Vests")
                 }
             }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0E3B691F2B1A6C4700847BB4 /* ClothingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */; };
 		421C7D262B1D02B700B1143D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C7D252B1D02B600B1143D /* FeedView.swift */; };
+		421C7D282B1D080E00B1143D /* SeasonQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C7D272B1D080E00B1143D /* SeasonQuestionView.swift */; };
+		421C7D2A2B1D08A700B1143D /* OccasionQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C7D292B1D08A700B1143D /* OccasionQuestionView.swift */; };
+		421C7D2C2B1D09DA00B1143D /* ColorQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C7D2B2B1D09DA00B1143D /* ColorQuestionView.swift */; };
 		732409AF2B18EBEF0056CA5D /* AddOuterwearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099A2B18EBEF0056CA5D /* AddOuterwearView.swift */; };
 		732409B12B18EBEF0056CA5D /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099C2B18EBEF0056CA5D /* SUImagePickerView.swift */; };
 		732409B22B18EBEF0056CA5D /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099D2B18EBEF0056CA5D /* CameraView.swift */; };
@@ -94,6 +97,9 @@
 /* Begin PBXFileReference section */
 		0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingObject.swift; sourceTree = "<group>"; };
 		421C7D252B1D02B600B1143D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		421C7D272B1D080E00B1143D /* SeasonQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonQuestionView.swift; sourceTree = "<group>"; };
+		421C7D292B1D08A700B1143D /* OccasionQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccasionQuestionView.swift; sourceTree = "<group>"; };
+		421C7D2B2B1D09DA00B1143D /* ColorQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorQuestionView.swift; sourceTree = "<group>"; };
 		7324099A2B18EBEF0056CA5D /* AddOuterwearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOuterwearView.swift; sourceTree = "<group>"; };
 		7324099C2B18EBEF0056CA5D /* SUImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
 		7324099D2B18EBEF0056CA5D /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -209,6 +215,9 @@
 				732409A52B18EBEF0056CA5D /* FullBodyView.swift */,
 				732409A72B18EBEF0056CA5D /* MainView.swift */,
 				421C7D252B1D02B600B1143D /* FeedView.swift */,
+				421C7D272B1D080E00B1143D /* SeasonQuestionView.swift */,
+				421C7D292B1D08A700B1143D /* OccasionQuestionView.swift */,
+				421C7D2B2B1D09DA00B1143D /* ColorQuestionView.swift */,
 				7324099F2B18EBEF0056CA5D /* OuterWearView.swift */,
 				732409A62B18EBEF0056CA5D /* ShoesView.swift */,
 				7324099C2B18EBEF0056CA5D /* SUImagePickerView.swift */,
@@ -432,6 +441,7 @@
 				732409E12B18EC1E0056CA5D /* JeansView.swift in Sources */,
 				732409DE2B18EC1E0056CA5D /* LongSkirtsView.swift in Sources */,
 				732409AF2B18EBEF0056CA5D /* AddOuterwearView.swift in Sources */,
+				421C7D2A2B1D08A700B1143D /* OccasionQuestionView.swift in Sources */,
 				73F9BE3F2AE3278D00E59C25 /* RootView.swift in Sources */,
 				73F9BE372AE316F200E59C25 /* LoginView.swift in Sources */,
 				732409DB2B18EC1E0056CA5D /* JacketsView.swift in Sources */,
@@ -441,6 +451,7 @@
 				732409BC2B18EBEF0056CA5D /* MainView.swift in Sources */,
 				735FC4102AF3E9D700487DD3 /* UserInfo.swift in Sources */,
 				732409E32B18EC1E0056CA5D /* ShortsView.swift in Sources */,
+				421C7D282B1D080E00B1143D /* SeasonQuestionView.swift in Sources */,
 				732409E92B18EC1E0056CA5D /* TankTopView.swift in Sources */,
 				732409B52B18EBEF0056CA5D /* AddTopsView.swift in Sources */,
 				732409B12B18EBEF0056CA5D /* SUImagePickerView.swift in Sources */,
@@ -455,6 +466,7 @@
 				733C7EB02AE1DE7E00CAAAD0 /* Database.swift in Sources */,
 				732409B72B18EBEF0056CA5D /* AddClothingView.swift in Sources */,
 				737C7D9D2AF9E2AB00B67F0D /* UserManager.swift in Sources */,
+				421C7D2C2B1D09DA00B1143D /* ColorQuestionView.swift in Sources */,
 				732409B62B18EBEF0056CA5D /* AddBottomsView.swift in Sources */,
 				732409E82B18EC1E0056CA5D /* JewleryView.swift in Sources */,
 				738DA4492AF16D400035117C /* CreateAcc.swift in Sources */,

@@ -6,12 +6,15 @@
 import SwiftUI
 
 struct AddClothingView: View {
+    //@EnvironmentObject var newClothingItem : ClothingObject
+    
     var body: some View {
         NavigationStack{
             VStack(
                 spacing: 50
             ) {
                 NavigationLink(destination: AddTopView()){
+                    //newClothingItem.closetObject.category = CategoryType.top
                     Text("ADD TOPS")
                 }
                 NavigationLink(destination: AddBottomsView()){

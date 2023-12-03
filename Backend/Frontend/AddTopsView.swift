@@ -16,19 +16,19 @@ struct AddTopView: View {
         
         NavigationStack{
             VStack(spacing: 20) {
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Tank Tops")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Short Sleeve")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Long Sleeves")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Sweaters")
                 }
-                NavigationLink(destination: CameraView()){
+                NavigationLink(destination: SeasonQuestionView()){
                     Text("Cardigans")
                 }
             }
