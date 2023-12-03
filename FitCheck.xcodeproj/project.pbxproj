@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E3B691F2B1A6C4700847BB4 /* ClothingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */; };
+		0E6B19A82B1D1BFE00ABACFE /* shirt2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B19A62B1D1BFE00ABACFE /* shirt2.jpeg */; };
+		0E6B19A92B1D1BFE00ABACFE /* shirt1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B19A72B1D1BFE00ABACFE /* shirt1.jpeg */; };
 		421C7D262B1D02B700B1143D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C7D252B1D02B600B1143D /* FeedView.swift */; };
 		732409AF2B18EBEF0056CA5D /* AddOuterwearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099A2B18EBEF0056CA5D /* AddOuterwearView.swift */; };
 		732409B12B18EBEF0056CA5D /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099C2B18EBEF0056CA5D /* SUImagePickerView.swift */; };
@@ -93,6 +95,8 @@
 
 /* Begin PBXFileReference section */
 		0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingObject.swift; sourceTree = "<group>"; };
+		0E6B19A62B1D1BFE00ABACFE /* shirt2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = shirt2.jpeg; path = "../../../../../FitCheck copy/Backend/Frontend/Views/assets/shirt2.jpeg"; sourceTree = "<group>"; };
+		0E6B19A72B1D1BFE00ABACFE /* shirt1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = shirt1.jpeg; path = "../../../../../FitCheck copy/Backend/Frontend/Views/assets/shirt1.jpeg"; sourceTree = "<group>"; };
 		421C7D252B1D02B600B1143D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		7324099A2B18EBEF0056CA5D /* AddOuterwearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOuterwearView.swift; sourceTree = "<group>"; };
 		7324099C2B18EBEF0056CA5D /* SUImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
@@ -189,6 +193,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E6B19A52B1D1BEB00ABACFE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0E6B19A72B1D1BFE00ABACFE /* shirt1.jpeg */,
+				0E6B19A62B1D1BFE00ABACFE /* shirt2.jpeg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		732409992B18EBDC0056CA5D /* Frontend */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +233,7 @@
 		732409C42B18EC140056CA5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0E6B19A52B1D1BEB00ABACFE /* images */,
 				732409CE2B18EC1E0056CA5D /* CardiganView.swift */,
 				732409CB2B18EC1E0056CA5D /* CoatsView.swift */,
 				732409C82B18EC1E0056CA5D /* DressesView.swift */,
@@ -399,8 +413,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				733C7EB72AE1DE7F00CAAAD0 /* Preview Assets.xcassets in Resources */,
+				0E6B19A92B1D1BFE00ABACFE /* shirt1.jpeg in Resources */,
 				733C7EB42AE1DE7F00CAAAD0 /* Assets.xcassets in Resources */,
 				733C7EBE2AE1DFDD00CAAAD0 /* GoogleService-Info.plist in Resources */,
+				0E6B19A82B1D1BFE00ABACFE /* shirt2.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

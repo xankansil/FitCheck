@@ -423,7 +423,7 @@ final class UserManager {
                                                     mostRecWear: Date(),
                                                     timesWorn: 10,
                                                     favorite: true,
-                                                    img_url: "IMG_1604.jpg")
+                                                    img_url: "shirt1")
         
         let top1 = try await addClothingItem(userID: userID,
                                                     color: ColorType.green,
@@ -435,7 +435,7 @@ final class UserManager {
                                                     mostRecWear: Date(),
                                                     timesWorn: 10,
                                                     favorite: true,
-                                                    img_url: "shortsleeve image.jpg")
+                                                    img_url: "shirt2")
         
         let top2 = try await addClothingItem(userID: userID,
                                                     color: ColorType.green,
