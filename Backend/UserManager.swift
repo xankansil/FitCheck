@@ -50,6 +50,7 @@
 // TODO: Add favorite bool to clothingItem  (DONE!)
 
 // In-Progress
+// TODO: potential huge problem w/ getLoadedData async workaround currently in place
 // TODO: add img_url fields to all structs
 // TODO: favorite clothes and favorite shoes in profile
 // TODO: deleteUser function and deleteAllUsers that works for both firestore and authentication database (john help pls)
@@ -168,6 +169,7 @@ public enum CategoryType: String, Codable {
 }
 
 public enum ClothingType: String, Codable {
+    
     // Tops
     case tanktop
     case shortsleeve
@@ -213,7 +215,7 @@ public enum WeatherType: String, Codable {
 /* STRUCTS for global use */
 
 
-public struct ClothingItem: Codable {
+public struct ClothingItem: Codable, Hashable{
     var id: String?
     let color: ColorType?
     let category: CategoryType?
@@ -239,6 +241,7 @@ public struct ClothingItem: Codable {
         case favorite
         case img_url
     }
+    
 }
 
 public struct Outfit: Codable {
@@ -289,6 +292,7 @@ final class UserManager {
     
     // Singleton for use of methods
     static let shared = UserManager()
+    var userInfo: UserData?
     private init() {}
     
     // Examples for creating data for a new user
@@ -305,7 +309,7 @@ final class UserManager {
 //            most_rec_wear: Date(),
 //            times_worn: 0,
 //            favorite: false)
-//        
+//
 //        let dummyItem2 = ClothingItem(
 //            id: "tempID",
 //            color: ColorType.red,
@@ -317,7 +321,7 @@ final class UserManager {
 //            most_rec_wear: Date(),
 //            times_worn: 0,
 //            favorite: false)
-//        
+//
 //        let dummyItem3 = ClothingItem(
 //            id: "tempID",
 //            color: ColorType.red,
@@ -329,7 +333,7 @@ final class UserManager {
 //            most_rec_wear: Date(),
 //            times_worn: 0,
 //            favorite: false)
-//        
+//
 //        let dummyItem4 = ClothingItem(
 //            id: "tempID",
 //            color: ColorType.blue,
@@ -341,13 +345,13 @@ final class UserManager {
 //            most_rec_wear: Date(),
 //            times_worn: 1,
 //            favorite: false)
-//        
+//
 //        // Add items per their data
 //        try closetRef.addDocument(from: dummyItem1)
 //        try closetRef.addDocument(from: dummyItem2)
 //        try closetRef.addDocument(from: dummyItem3)
 //        try closetRef.addDocument(from: dummyItem4)
-//        
+//
 //        // Update the clothingIDs to be their real, firestore-given ids
 //        let closet = try await Firestore.firestore().collection("users").document(userID).collection("closet").whereField("id", isEqualTo: "tempID").getDocuments()
 //        for document in closet.documents {
@@ -356,24 +360,38 @@ final class UserManager {
 //                try await document.reference.updateData(["id" : realID])
 //            }
 //        }
+//        // Using explicit "addClothingItem" function (automatically generates appropriate IDs, still needs "tempID")
+//        let dummyItem5 = ClothingItem(
+//            id: "tempID",
+//            color: ColorType.blue,
+//            category: CategoryType.shoes,
+//            clothing: ClothingType.shoes,
+//            occasion: OccasionType.casual,
+//            weather: WeatherType.winter,
+//            date_added: Date(),
+//            most_rec_wear: Date(),
+//            times_worn: 1,
+//            favorite: false)
+//        
+//        let dummyItem = ClothingItem(
+//            id: "tempID",
+//            color: nil,
+//            category: nil,
+//            clothing: nil,
+//            occasion: nil,
+//            weather: nil,
+//            date_added: Date(),
+//            most_rec_wear: nil,
+//            times_worn: 0,
+//            favorite: false,
+//            img_url: nil
+//            )
+//        
+//        try await addClothingItem(userID: userID, clothingData: dummyItem5)
         
         // First get a reference to the closet / outfits for later use with queries
         let closetRef = closetRef(userID: userID)
         let outfitsRef = outfitsRef(userID: userID)
-        
-        // Using explicit "addClothingItem" function (automatically generates appropriate IDs, still needs "tempID")
-        let dummyItem5 = ClothingItem(
-            id: "tempID",
-            color: ColorType.blue,
-            category: CategoryType.shoes,
-            clothing: ClothingType.shoes,
-            occasion: OccasionType.casual,
-            weather: WeatherType.winter,
-            date_added: Date(),
-            most_rec_wear: Date(),
-            times_worn: 1,
-            favorite: false)
-        try await addClothingItem(userID: userID, clothingData: dummyItem5)
         
         // Using one-line, field-based version (best practice as there is no need to supply "tempID")
         let partyShorts = try await addClothingItem(userID: userID,
@@ -385,7 +403,44 @@ final class UserManager {
                                                     dateAdded: Date(),
                                                     mostRecWear: Date(),
                                                     timesWorn: 10,
-                                                    favorite: true)
+                                                    favorite: true,
+                                                    img_url: "IMG_22K.jpg")
+        
+        let partyShirt = try await addClothingItem(userID: userID,
+                                                    color: ColorType.green,
+                                                    category: CategoryType.top,
+                                                    clothing: ClothingType.shortsleeve,
+                                                    occasion: OccasionType.holiday,
+                                                    weather: WeatherType.winter,
+                                                    dateAdded: Date(),
+                                                    mostRecWear: Date(),
+                                                    timesWorn: 10,
+                                                    favorite: true,
+                                                    img_url: "IMG_1604.jpg")
+        
+        let top1 = try await addClothingItem(userID: userID,
+                                                    color: ColorType.green,
+                                                    category: CategoryType.top,
+                                                    clothing: ClothingType.shortsleeve,
+                                                    occasion: OccasionType.holiday,
+                                                    weather: WeatherType.winter,
+                                                    dateAdded: Date(),
+                                                    mostRecWear: Date(),
+                                                    timesWorn: 10,
+                                                    favorite: true,
+                                                    img_url: "shortsleeve image.jpg")
+        
+        let top2 = try await addClothingItem(userID: userID,
+                                                    color: ColorType.green,
+                                                    category: CategoryType.top,
+                                                    clothing: ClothingType.longsleeve,
+                                                    occasion: OccasionType.holiday,
+                                                    weather: WeatherType.winter,
+                                                    dateAdded: Date(),
+                                                    mostRecWear: Date(),
+                                                    timesWorn: 10,
+                                                    favorite: true,
+                                                    img_url: "longsleeve image.jpg")
         
         // Testing queries on clothingItems
         let clothingQuery = closetRef.whereField("color", isEqualTo: "red")
@@ -472,10 +527,15 @@ final class UserManager {
     }
     
     // Here is where any pertinent data can be loaded and initialized on login
-    func loadDataOnLogin(loginData: LoginData) async throws {
+    func loadDataOnLogin(loginData: LoginData) async throws  {
         // Data needed for initial view can be retrieved here
+        userInfo = try await getUserData(userID: loginData.uid)
     }
     
+    // TODO: (this really should not exist as it breaks all concept of async stuff. must handle optionals being nil in all views fastidiously)
+    func getLoadedData() -> UserData? {
+        return self.userInfo
+    }
     
     /* UTILITY */
     
@@ -503,7 +563,12 @@ final class UserManager {
     // Really just a wrapper for a call to "getClothingItems" with a special query for matching id fields (so requires a userID)
     func clothingIDstoClothingItems(userID: String, ids: [String]) async throws -> [ClothingItem] {
         let closetRef = closetRef(userID: userID)
-        return try await getClothingItems(userID: userID, query: closetRef.whereField("id", in: ids))
+        // Check if list is empty
+        if (ids.isEmpty) {
+            return []
+        } else {
+            return try await getClothingItems(userID: userID, query: closetRef.whereField("id", in: ids))
+        }
     }
     
     
@@ -650,7 +715,7 @@ final class UserManager {
     
     // Adds a new clothingItem, taking optional values for the fields to be used (best practice, as no need to supply item id!)
     // Returns the struct of the item added
-    func addClothingItem(userID: String, color: ColorType?, category: CategoryType?, clothing: ClothingType?, occasion: OccasionType?, weather: WeatherType?, dateAdded: Date?, mostRecWear: Date?, timesWorn: Int64?, favorite: Bool?) async throws -> ClothingItem? {
+    func addClothingItem(userID: String, color: ColorType?, category: CategoryType?, clothing: ClothingType?, occasion: OccasionType?, weather: WeatherType?, dateAdded: Date?, mostRecWear: Date?, timesWorn: Int64?, favorite: Bool?, img_url: String?) async throws -> ClothingItem? {
         // Convert given fields into a proper ClothingItem struct
         var clothingData = ClothingItem(id: "tempID",
                                         color: color,
@@ -661,7 +726,8 @@ final class UserManager {
                                         date_added: dateAdded,
                                         most_rec_wear: mostRecWear,
                                         times_worn: timesWorn,
-                                        favorite: favorite)
+                                        favorite: favorite,
+                                        img_url: img_url)
         
         // Add the new clothing item to the database
         let closetRef = closetRef(userID: userID)
