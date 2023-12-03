@@ -37,6 +37,7 @@ final class LoginManager {
     func logIn(email: String, pw: String) async throws -> LoginData {
         let logDataRes = try await Auth.auth().signIn(withEmail: email, password: pw)
         let loginData = LoginData(user: logDataRes.user)
+        try await UserManager.shared.loadDataOnLogin(loginData: loginData)
         return loginData
     }
 }
