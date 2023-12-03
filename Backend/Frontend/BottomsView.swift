@@ -30,7 +30,7 @@ struct BottomsView: View {
                 NavigationLink(destination: ShortSkirtsView()){
                     Text("Short Skirts")
                 }
-                NavigationLink(destination: TankTopView()){
+                NavigationLink(destination: JeansView()){
                     Text("Jeans")
                 }
             }

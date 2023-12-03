@@ -368,6 +368,7 @@ final class UserManager {
             favorite: false,
             img_url: "shirt1"
         )
+        try await addClothingItem(userID: userID, clothingData: dummyItem1)
             
         let dummyItem2 = ClothingItem(
             id: "tempID",
@@ -382,7 +383,8 @@ final class UserManager {
             favorite: false,
             img_url: "shirt2"
         )
-
+        try await addClothingItem(userID: userID, clothingData: dummyItem2)
+      
         let dummyItem3 = ClothingItem(
             id: "tempID",
             color: ColorType.red,
@@ -396,7 +398,10 @@ final class UserManager {
             favorite: false,
             img_url: "redTank"
         )
-
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem3)
+      
+       
         let dummyItem4 = ClothingItem(
             id: "tempID",
             color: ColorType.orange,
@@ -410,6 +415,8 @@ final class UserManager {
             favorite: false,
             img_url: "orangeLongsleeve"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem4)
 
         let dummyItem5 = ClothingItem(
             id: "tempID",
@@ -424,6 +431,8 @@ final class UserManager {
             favorite: false,
             img_url: "yellowSweater"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem5)
 
         let dummyItem6 = ClothingItem(
             id: "tempID",
@@ -438,6 +447,8 @@ final class UserManager {
             favorite: false,
             img_url: "greenCardigan"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem6)
 
         let dummyItem7 = ClothingItem(
             id: "tempID",
@@ -452,6 +463,8 @@ final class UserManager {
             favorite: true,
             img_url: "bluePants"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem7)
 
         let dummyItem8 = ClothingItem(
             id: "tempID",
@@ -466,6 +479,8 @@ final class UserManager {
             favorite: false,
             img_url: "purpleShorts"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem8)
 
         let dummyItem9 = ClothingItem(
             id: "tempID",
@@ -480,6 +495,8 @@ final class UserManager {
             favorite: false,
             img_url: "blackSkirt"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem9)
 
         let dummyItem10 = ClothingItem(
             id: "tempID",
@@ -494,6 +511,8 @@ final class UserManager {
             favorite: false,
             img_url: "whiteSkirt"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem10)
 
         let dummyItem11 = ClothingItem(
             id: "tempID",
@@ -509,6 +528,8 @@ final class UserManager {
             img_url: "blackJeans"
         )
 
+        try await addClothingItem(userID: userID, clothingData: dummyItem11)
+      
         let dummyItem12 = ClothingItem(
             id: "tempID",
             color: ColorType.black,
@@ -522,6 +543,8 @@ final class UserManager {
             favorite: true,
             img_url: "blackDress"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem12)
 
         let dummyItem13 = ClothingItem(
             id: "tempID",
@@ -536,6 +559,8 @@ final class UserManager {
             favorite: false,
             img_url: "redJumpsuit"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem13)
 
         let dummyItem14 = ClothingItem(
             id: "tempID",
@@ -551,6 +576,8 @@ final class UserManager {
             img_url: "orangeJacket"
         )
 
+        try await addClothingItem(userID: userID, clothingData: dummyItem14)
+      
         let dummyItem15 = ClothingItem(
             id: "tempID",
             color: ColorType.pink,
@@ -564,6 +591,9 @@ final class UserManager {
             favorite: false,
             img_url: "pinkSweatshirt"
         )
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem15)
+      
 
         let dummyItem16 = ClothingItem(
             id: "tempID",
@@ -578,7 +608,9 @@ final class UserManager {
             favorite: false,
             img_url: "blackPuffer"
         )
-
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem16)
+       
         let dummyItem17 = ClothingItem(
             id: "tempID",
             color: ColorType.black,
@@ -593,6 +625,8 @@ final class UserManager {
             img_url: "blackVest"
         )
 
+        try await addClothingItem(userID: userID, clothingData: dummyItem17)
+      
         let dummyItem18 = ClothingItem(
             id: "tempID",
             color: ColorType.red,
@@ -606,6 +640,8 @@ final class UserManager {
             favorite: false,
             img_url: "redHat"
         )
+        try await addClothingItem(userID: userID, clothingData: dummyItem18)
+      
 
         let dummyItem19 = ClothingItem(
             id: "tempID",
@@ -620,7 +656,10 @@ final class UserManager {
             favorite: false,
             img_url: "greenScarf"
         )
-
+        
+        try await addClothingItem(userID: userID, clothingData: dummyItem19)
+      
+       
         let dummyItem20 = ClothingItem(
             id: "tempID",
             color: ColorType.black,
@@ -635,6 +674,8 @@ final class UserManager {
             img_url: "blackDressShoes"
         )
 
+        try await addClothingItem(userID: userID, clothingData: dummyItem20)
+      
         let dummyItem21 = ClothingItem(
             id: "tempID",
             color: ColorType.black,
@@ -648,6 +689,9 @@ final class UserManager {
             favorite: false,
             img_url: "whiteSneaker"
         )
+        try await addClothingItem(userID: userID, clothingData: dummyItem21)
+      
+       
 
 //
 //        // Add items per their data

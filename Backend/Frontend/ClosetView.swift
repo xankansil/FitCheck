@@ -16,7 +16,7 @@ struct ClosetView: View {
             spacing: 10
         ) {
             //display the appname above buttons
-            Text("Search")
+            Text("Closet")
                 .font(.system(size: 30))
                 .foregroundStyle(.indigo)
                 .border(Color.white)
