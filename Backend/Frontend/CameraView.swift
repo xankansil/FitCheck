@@ -9,6 +9,7 @@ struct CameraView: View {
     
     var body: some View {
         // WARNING: Force wrapped image for demo purpose
+        Text("Click here to take or upload photo")
         image!
             .resizable()
             .aspectRatio(contentMode: .fill)

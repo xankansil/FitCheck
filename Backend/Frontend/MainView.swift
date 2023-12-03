@@ -13,10 +13,10 @@ struct MainView: View {
     @EnvironmentObject var closet: ClothingObject
     var body: some View {
         TabView {
-//            HomeView()
-//                .tabItem {
-//                    Label("Home", systemImage: "house.fill")
-//                }
+            FeedView()
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
 
             AddClothingView()
                 .tabItem {

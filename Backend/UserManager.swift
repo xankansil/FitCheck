@@ -375,7 +375,7 @@ final class UserManager {
             id: "tempID",
             color: ColorType.blue,
             category: CategoryType.shoes,
-            clothing: ClothingType.shoes,
+            clothing: ClothingType.dressshoes,
             occasion: OccasionType.casual,
             weather: WeatherType.winter,
             date_added: Date(),
@@ -458,7 +458,7 @@ final class UserManager {
         //        print("Removed the following item: \n\(removed)")
         
         // Testing deleting an outfit
-        try await deleteOutfit(userID: userID, outfitID: redBlueOutfit!.id!)
+       // try await deleteOutfit(userID: userID, outfitID: redBlueOutfit!.id!)
         
         // Testing deleting this user (should also throw you back to the login/create user screen)
         // try await deleteUser(userID: userID)
