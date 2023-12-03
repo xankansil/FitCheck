@@ -199,6 +199,7 @@ public enum ClothingType: String, Codable {
     // Accessories
     case hat
     case scarf
+    case jewlery
     
     // Shoes
     case dressshoes
