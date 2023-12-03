@@ -9,6 +9,25 @@
 /* Begin PBXBuildFile section */
 		0E2370122B1D34A300B803BE /* shirt1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370112B1D34A300B803BE /* shirt1.jpeg */; };
 		0E2370142B1D34A900B803BE /* shirt2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370132B1D34A900B803BE /* shirt2.jpeg */; };
+		0E2370162B1D371100B803BE /* blackDress.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370152B1D371100B803BE /* blackDress.png */; };
+		0E2370182B1D371600B803BE /* blackDressShoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370172B1D371600B803BE /* blackDressShoes.png */; };
+		0E23701A2B1D371A00B803BE /* blackJeans.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370192B1D371A00B803BE /* blackJeans.png */; };
+		0E23701C2B1D371D00B803BE /* blackPuffer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E23701B2B1D371D00B803BE /* blackPuffer.png */; };
+		0E23701E2B1D372000B803BE /* blackSkirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E23701D2B1D372000B803BE /* blackSkirt.png */; };
+		0E2370202B1D372400B803BE /* blackVest.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E23701F2B1D372400B803BE /* blackVest.png */; };
+		0E2370222B1D372900B803BE /* bluePants.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370212B1D372900B803BE /* bluePants.png */; };
+		0E2370242B1D372E00B803BE /* greenCardigan.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370232B1D372E00B803BE /* greenCardigan.png */; };
+		0E2370262B1D373200B803BE /* greenScarf.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370252B1D373100B803BE /* greenScarf.png */; };
+		0E2370282B1D373600B803BE /* orangeJacket.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370272B1D373600B803BE /* orangeJacket.png */; };
+		0E23702A2B1D378600B803BE /* orangeJacket.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370292B1D378600B803BE /* orangeJacket.png */; };
+		0E23702C2B1D378900B803BE /* pinkSweatshirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E23702B2B1D378900B803BE /* pinkSweatshirt.jpg */; };
+		0E23702E2B1D378C00B803BE /* purpleShorts.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E23702D2B1D378C00B803BE /* purpleShorts.png */; };
+		0E2370302B1D379000B803BE /* redHat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E23702F2B1D379000B803BE /* redHat.png */; };
+		0E2370322B1D379400B803BE /* redJumpsuit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370312B1D379400B803BE /* redJumpsuit.png */; };
+		0E2370342B1D379700B803BE /* redTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370332B1D379700B803BE /* redTank.png */; };
+		0E2370362B1D379B00B803BE /* yellowSweater.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370352B1D379B00B803BE /* yellowSweater.png */; };
+		0E2370382B1D37B000B803BE /* whiteSkirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370372B1D37B000B803BE /* whiteSkirt.jpg */; };
+		0E23703A2B1D37C700B803BE /* whiteSneaker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E2370392B1D37C700B803BE /* whiteSneaker.jpg */; };
 		0E3B691F2B1A6C4700847BB4 /* ClothingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */; };
 		421C7D262B1D02B700B1143D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C7D252B1D02B600B1143D /* FeedView.swift */; };
 		421C7D282B1D080E00B1143D /* SeasonQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C7D272B1D080E00B1143D /* SeasonQuestionView.swift */; };
@@ -99,6 +118,25 @@
 /* Begin PBXFileReference section */
 		0E2370112B1D34A300B803BE /* shirt1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shirt1.jpeg; sourceTree = "<group>"; };
 		0E2370132B1D34A900B803BE /* shirt2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shirt2.jpeg; sourceTree = "<group>"; };
+		0E2370152B1D371100B803BE /* blackDress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackDress.png; path = ../../../../../../../../Downloads/DummyData/blackDress.png; sourceTree = "<group>"; };
+		0E2370172B1D371600B803BE /* blackDressShoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackDressShoes.png; path = ../../../../../../../../Downloads/DummyData/blackDressShoes.png; sourceTree = "<group>"; };
+		0E2370192B1D371A00B803BE /* blackJeans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackJeans.png; path = ../../../../../../../../Downloads/DummyData/blackJeans.png; sourceTree = "<group>"; };
+		0E23701B2B1D371D00B803BE /* blackPuffer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackPuffer.png; path = ../../../../../../../../Downloads/DummyData/blackPuffer.png; sourceTree = "<group>"; };
+		0E23701D2B1D372000B803BE /* blackSkirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackSkirt.png; path = ../../../../../../../../Downloads/DummyData/blackSkirt.png; sourceTree = "<group>"; };
+		0E23701F2B1D372400B803BE /* blackVest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackVest.png; path = ../../../../../../../../Downloads/DummyData/blackVest.png; sourceTree = "<group>"; };
+		0E2370212B1D372900B803BE /* bluePants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePants.png; path = ../../../../../../../../Downloads/DummyData/bluePants.png; sourceTree = "<group>"; };
+		0E2370232B1D372E00B803BE /* greenCardigan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenCardigan.png; path = ../../../../../../../../Downloads/DummyData/greenCardigan.png; sourceTree = "<group>"; };
+		0E2370252B1D373100B803BE /* greenScarf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenScarf.png; path = ../../../../../../../../Downloads/DummyData/greenScarf.png; sourceTree = "<group>"; };
+		0E2370272B1D373600B803BE /* orangeJacket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangeJacket.png; path = ../../../../../../../../Downloads/DummyData/orangeJacket.png; sourceTree = "<group>"; };
+		0E2370292B1D378600B803BE /* orangeJacket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangeJacket.png; path = ../../../../../../../../Downloads/DummyData/orangeJacket.png; sourceTree = "<group>"; };
+		0E23702B2B1D378900B803BE /* pinkSweatshirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pinkSweatshirt.jpg; path = ../../../../../../../../Downloads/DummyData/pinkSweatshirt.jpg; sourceTree = "<group>"; };
+		0E23702D2B1D378C00B803BE /* purpleShorts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purpleShorts.png; path = ../../../../../../../../Downloads/DummyData/purpleShorts.png; sourceTree = "<group>"; };
+		0E23702F2B1D379000B803BE /* redHat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redHat.png; path = ../../../../../../../../Downloads/DummyData/redHat.png; sourceTree = "<group>"; };
+		0E2370312B1D379400B803BE /* redJumpsuit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redJumpsuit.png; path = ../../../../../../../../Downloads/DummyData/redJumpsuit.png; sourceTree = "<group>"; };
+		0E2370332B1D379700B803BE /* redTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redTank.png; path = ../../../../../../../../Downloads/DummyData/redTank.png; sourceTree = "<group>"; };
+		0E2370352B1D379B00B803BE /* yellowSweater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellowSweater.png; path = ../../../../../../../../Downloads/DummyData/yellowSweater.png; sourceTree = "<group>"; };
+		0E2370372B1D37B000B803BE /* whiteSkirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whiteSkirt.jpg; path = ../../../../../../../../Downloads/DummyData/whiteSkirt.jpg; sourceTree = "<group>"; };
+		0E2370392B1D37C700B803BE /* whiteSneaker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whiteSneaker.jpg; path = ../../../../../../../../Downloads/DummyData/whiteSneaker.jpg; sourceTree = "<group>"; };
 		0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingObject.swift; sourceTree = "<group>"; };
 		421C7D252B1D02B600B1143D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		421C7D272B1D080E00B1143D /* SeasonQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonQuestionView.swift; sourceTree = "<group>"; };
@@ -202,6 +240,25 @@
 		0E2370102B1D332100B803BE /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				0E2370152B1D371100B803BE /* blackDress.png */,
+				0E2370172B1D371600B803BE /* blackDressShoes.png */,
+				0E2370192B1D371A00B803BE /* blackJeans.png */,
+				0E23701B2B1D371D00B803BE /* blackPuffer.png */,
+				0E23701D2B1D372000B803BE /* blackSkirt.png */,
+				0E23701F2B1D372400B803BE /* blackVest.png */,
+				0E23702B2B1D378900B803BE /* pinkSweatshirt.jpg */,
+				0E2370312B1D379400B803BE /* redJumpsuit.png */,
+				0E2370372B1D37B000B803BE /* whiteSkirt.jpg */,
+				0E23702D2B1D378C00B803BE /* purpleShorts.png */,
+				0E2370352B1D379B00B803BE /* yellowSweater.png */,
+				0E2370332B1D379700B803BE /* redTank.png */,
+				0E23702F2B1D379000B803BE /* redHat.png */,
+				0E2370392B1D37C700B803BE /* whiteSneaker.jpg */,
+				0E2370292B1D378600B803BE /* orangeJacket.png */,
+				0E2370212B1D372900B803BE /* bluePants.png */,
+				0E2370272B1D373600B803BE /* orangeJacket.png */,
+				0E2370252B1D373100B803BE /* greenScarf.png */,
+				0E2370232B1D372E00B803BE /* greenCardigan.png */,
 				0E2370132B1D34A900B803BE /* shirt2.jpeg */,
 				0E2370112B1D34A300B803BE /* shirt1.jpeg */,
 			);
@@ -421,11 +478,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E2370182B1D371600B803BE /* blackDressShoes.png in Resources */,
+				0E2370382B1D37B000B803BE /* whiteSkirt.jpg in Resources */,
+				0E23702A2B1D378600B803BE /* orangeJacket.png in Resources */,
+				0E2370242B1D372E00B803BE /* greenCardigan.png in Resources */,
+				0E23701E2B1D372000B803BE /* blackSkirt.png in Resources */,
+				0E2370282B1D373600B803BE /* orangeJacket.png in Resources */,
+				0E2370302B1D379000B803BE /* redHat.png in Resources */,
+				0E23701C2B1D371D00B803BE /* blackPuffer.png in Resources */,
+				0E23702E2B1D378C00B803BE /* purpleShorts.png in Resources */,
 				733C7EB72AE1DE7F00CAAAD0 /* Preview Assets.xcassets in Resources */,
+				0E2370162B1D371100B803BE /* blackDress.png in Resources */,
+				0E23702C2B1D378900B803BE /* pinkSweatshirt.jpg in Resources */,
 				733C7EB42AE1DE7F00CAAAD0 /* Assets.xcassets in Resources */,
+				0E2370222B1D372900B803BE /* bluePants.png in Resources */,
 				0E2370122B1D34A300B803BE /* shirt1.jpeg in Resources */,
+				0E2370262B1D373200B803BE /* greenScarf.png in Resources */,
 				733C7EBE2AE1DFDD00CAAAD0 /* GoogleService-Info.plist in Resources */,
+				0E23703A2B1D37C700B803BE /* whiteSneaker.jpg in Resources */,
 				0E2370142B1D34A900B803BE /* shirt2.jpeg in Resources */,
+				0E2370362B1D379B00B803BE /* yellowSweater.png in Resources */,
+				0E2370202B1D372400B803BE /* blackVest.png in Resources */,
+				0E2370322B1D379400B803BE /* redJumpsuit.png in Resources */,
+				0E2370342B1D379700B803BE /* redTank.png in Resources */,
+				0E23701A2B1D371A00B803BE /* blackJeans.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
