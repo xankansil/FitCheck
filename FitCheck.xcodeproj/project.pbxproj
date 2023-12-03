@@ -199,13 +199,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E6B19A52B1D1BEB00ABACFE /* images */ = {
+		0E6B19A52B1D1BEB00ABACFE /* assets */ = {
 			isa = PBXGroup;
 			children = (
 				0E6B19A72B1D1BFE00ABACFE /* shirt1.jpeg */,
 				0E6B19A62B1D1BFE00ABACFE /* shirt2.jpeg */,
 			);
-			path = images;
+			path = assets;
 			sourceTree = "<group>";
 		};
 		732409992B18EBDC0056CA5D /* Frontend */ = {
@@ -242,7 +242,7 @@
 		732409C42B18EC140056CA5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E6B19A52B1D1BEB00ABACFE /* images */,
+				0E6B19A52B1D1BEB00ABACFE /* assets */,
 				732409CE2B18EC1E0056CA5D /* CardiganView.swift */,
 				732409CB2B18EC1E0056CA5D /* CoatsView.swift */,
 				732409C82B18EC1E0056CA5D /* DressesView.swift */,
