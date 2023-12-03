@@ -353,6 +353,301 @@ final class UserManager {
 //            most_rec_wear: Date(),
 //            times_worn: 1,
 //            favorite: false)
+        
+        let dummyItem1 = ClothingItem(
+            id: "tempID",
+            color: ColorType.white,
+            category: CategoryType.top,
+            clothing: ClothingType.shortsleeve,
+            occasion: OccasionType.casual,
+            weather: WeatherType.summer,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 0,
+            favorite: false,
+            img_url: "shirt1"
+        )
+            
+        let dummyItem2 = ClothingItem(
+            id: "tempID",
+            color: ColorType.multicolor,
+            category: CategoryType.top,
+            clothing: ClothingType.shortsleeve,
+            occasion: OccasionType.casual,
+            weather: WeatherType.summer,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 0,
+            favorite: false,
+            img_url: "shirt2"
+        )
+
+        let dummyItem3 = ClothingItem(
+            id: "tempID",
+            color: ColorType.red,
+            category: CategoryType.top,
+            clothing: ClothingType.tanktop,
+            occasion: OccasionType.casual,
+            weather: WeatherType.summer,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 2,
+            favorite: false,
+            img_url: "redTank"
+        )
+
+        let dummyItem4 = ClothingItem(
+            id: "tempID",
+            color: ColorType.orange,
+            category: CategoryType.top,
+            clothing: ClothingType.longsleeve,
+            occasion: OccasionType.fancy,
+            weather: WeatherType.fall,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 1,
+            favorite: false,
+            img_url: "orangeLongsleeve"
+        )
+
+        let dummyItem5 = ClothingItem(
+            id: "tempID",
+            color: ColorType.yellow,
+            category: CategoryType.top,
+            clothing: ClothingType.sweater,
+            occasion: OccasionType.loungewear,
+            weather: WeatherType.winter,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 3,
+            favorite: false,
+            img_url: "yellowSweater"
+        )
+
+        let dummyItem6 = ClothingItem(
+            id: "tempID",
+            color: ColorType.green,
+            category: CategoryType.top,
+            clothing: ClothingType.cardigan,
+            occasion: OccasionType.holiday,
+            weather: WeatherType.winter,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 0,
+            favorite: false,
+            img_url: "greenCardigan"
+        )
+
+        let dummyItem7 = ClothingItem(
+            id: "tempID",
+            color: ColorType.blue,
+            category: CategoryType.bottom,
+            clothing: ClothingType.pants,
+            occasion: OccasionType.casual,
+            weather: WeatherType.fall,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 6,
+            favorite: true,
+            img_url: "bluePants"
+        )
+
+        let dummyItem8 = ClothingItem(
+            id: "tempID",
+            color: ColorType.purple,
+            category: CategoryType.bottom,
+            clothing: ClothingType.shorts,
+            occasion: OccasionType.casual,
+            weather: WeatherType.summer,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 2,
+            favorite: false,
+            img_url: "purpleShorts"
+        )
+
+        let dummyItem9 = ClothingItem(
+            id: "tempID",
+            color: ColorType.black,
+            category: CategoryType.bottom,
+            clothing: ClothingType.longskirt,
+            occasion: OccasionType.fancy,
+            weather: WeatherType.spring,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 4,
+            favorite: false,
+            img_url: "blackSkirt"
+        )
+
+        let dummyItem10 = ClothingItem(
+            id: "tempID",
+            color: ColorType.white,
+            category: CategoryType.bottom,
+            clothing: ClothingType.shortskirt,
+            occasion: OccasionType.party,
+            weather: WeatherType.summer,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 0,
+            favorite: false,
+            img_url: "whiteSkirt"
+        )
+
+        let dummyItem11 = ClothingItem(
+            id: "tempID",
+            color: ColorType.black,
+            category: CategoryType.bottom,
+            clothing: ClothingType.jeans,
+            occasion: OccasionType.party,
+            weather: WeatherType.spring,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 5,
+            favorite: false,
+            img_url: "blackJeans"
+        )
+
+        let dummyItem12 = ClothingItem(
+            id: "tempID",
+            color: ColorType.black,
+            category: CategoryType.fullbody,
+            clothing: ClothingType.dress,
+            occasion: OccasionType.fancy,
+            weather: WeatherType.spring,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 3,
+            favorite: true,
+            img_url: "blackDress"
+        )
+
+        let dummyItem13 = ClothingItem(
+            id: "tempID",
+            color: ColorType.red,
+            category: CategoryType.fullbody,
+            clothing: ClothingType.jumpsuit,
+            occasion: OccasionType.holiday,
+            weather: WeatherType.fall,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 0,
+            favorite: false,
+            img_url: "redJumpsuit"
+        )
+
+        let dummyItem14 = ClothingItem(
+            id: "tempID",
+            color: ColorType.orange,
+            category: CategoryType.outerwear,
+            clothing: ClothingType.jacket,
+            occasion: OccasionType.casual,
+            weather: WeatherType.fall,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 8,
+            favorite: true,
+            img_url: "orangeJacket"
+        )
+
+        let dummyItem15 = ClothingItem(
+            id: "tempID",
+            color: ColorType.pink,
+            category: CategoryType.outerwear,
+            clothing: ClothingType.sweatshirt,
+            occasion: OccasionType.loungewear,
+            weather: WeatherType.winter,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 0,
+            favorite: false,
+            img_url: "pinkSweatshirt"
+        )
+
+        let dummyItem16 = ClothingItem(
+            id: "tempID",
+            color: ColorType.black,
+            category: CategoryType.outerwear,
+            clothing: ClothingType.coat,
+            occasion: OccasionType.casual,
+            weather: WeatherType.winter,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 7,
+            favorite: false,
+            img_url: "blackPuffer"
+        )
+
+        let dummyItem17 = ClothingItem(
+            id: "tempID",
+            color: ColorType.black,
+            category: CategoryType.outerwear,
+            clothing: ClothingType.vests,
+            occasion: OccasionType.casual,
+            weather: WeatherType.fall,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 8,
+            favorite: false,
+            img_url: "blackVest"
+        )
+
+        let dummyItem18 = ClothingItem(
+            id: "tempID",
+            color: ColorType.red,
+            category: CategoryType.accessory,
+            clothing: ClothingType.hat,
+            occasion: OccasionType.casual,
+            weather: WeatherType.winter,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 7,
+            favorite: false,
+            img_url: "redHat"
+        )
+
+        let dummyItem19 = ClothingItem(
+            id: "tempID",
+            color: ColorType.green,
+            category: CategoryType.accessory,
+            clothing: ClothingType.scarf,
+            occasion: OccasionType.casual,
+            weather: WeatherType.winter,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 0,
+            favorite: false,
+            img_url: "greenScarf"
+        )
+
+        let dummyItem20 = ClothingItem(
+            id: "tempID",
+            color: ColorType.black,
+            category: CategoryType.shoes,
+            clothing: ClothingType.dressshoes,
+            occasion: OccasionType.fancy,
+            weather: WeatherType.fall,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 7,
+            favorite: false,
+            img_url: "blackDressShoes"
+        )
+
+        let dummyItem21 = ClothingItem(
+            id: "tempID",
+            color: ColorType.black,
+            category: CategoryType.shoes,
+            clothing: ClothingType.sneakers,
+            occasion: OccasionType.casual,
+            weather: WeatherType.spring,
+            date_added: Date(),
+            most_rec_wear: nil,
+            times_worn: 0,
+            favorite: false,
+            img_url: "whiteSneaker"
+        )
+
 //
 //        // Add items per their data
 //        try closetRef.addDocument(from: dummyItem1)
