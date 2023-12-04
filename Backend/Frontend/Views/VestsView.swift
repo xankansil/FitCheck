@@ -20,7 +20,7 @@ struct VestsView: View {
                 Text("User id: \(userInfo!.id!)")
                 ScrollView{
                     //working with assests must work with link
-                    VStack(alignment: .leading, spacing: 20){
+                    VStack(alignment: .leading, spacing: 30){
                         
                         // Image(uiImage: UIImage(named: "shirt1")!)
                         // .scaledToFit()
@@ -28,6 +28,7 @@ struct VestsView: View {
                             if (item.img_url != nil){
                                 Image(uiImage: UIImage(named: item.img_url!)!)
                                     .scaledToFit()
+                                    .frame(width: 200, height: 200)
                             } else{
                                 Text("image url not found")
                             }
