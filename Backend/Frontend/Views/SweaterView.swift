@@ -29,6 +29,7 @@ struct SweaterView: View {
                             if (item.img_url != nil){
                                 Image(uiImage: UIImage(named: item.img_url!)!)
                                     .scaledToFit()
+                                    .frame(width: 200, height: 200)
                             } else{
                                 Text("image url not found")
                             }
