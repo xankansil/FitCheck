@@ -35,7 +35,7 @@ struct MainView: View {
                 }
             
             AccountView()
-                .tabItem {
+                .tabItem { 
                     Label("Account", systemImage: "person.fill")
                 }
         }

@@ -20,15 +20,21 @@ struct ColorQuestionView: View {
                     
                     
                     // TODO: have the basic previous info loaded into a funciton to upload to the db
-                    // Having troubles accessing the function from user manager
-                    // Also, not sure if the global variable will actually carry over the info
                     
+                    // Currently I am trying to submit the info at this point because if it can get here then extending the
+                    // variable and the submission point to the picture view should not be difficult, but I currently do no feel like
+                    // fidgiting with/figuring out how to also include a photo in the submission to the database
                     
-                    let newItem = try await AddTopView(newClothingItem: <#T##EnvironmentObject<ClothingObject>#>)
-                    
-                    let newItem = try await addClothingItem(userID: userID,
-                            color: ColorType.green,
-                            category: CategoryType.bottom,
+                    // Where to collect the users Id? Seems like UserInfo is not the struct to use since it neither has the actual Id
+                    // and it still seems to have issues seeing it in this scope cuz Swift sucks
+                    let newItem = try await addClothingItem(userID: userInfo?.id,
+                                                            
+                            // These two (I believe) are how this submission would be structured, but it seems to have difficulty finding the funciton.
+                            // It will probably have issues seeing the variable at this point too, so that will be something to address if the function
+                            // issue gets fixed first
+                            color: newClothingItem.closetObject.color,
+                            category: newClothingItem.closetObject.category,
+                                                            
                             clothing: ClothingType.shorts,
                             occasion: OccasionType.holiday,
                             weather: WeatherType.winter,
