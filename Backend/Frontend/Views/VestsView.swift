@@ -3,6 +3,7 @@
 //  Closet
 //
 //  Created by Adalia Williams on 11/27/23.
+
 import SwiftUI
 
 struct VestsView: View {
@@ -50,7 +51,6 @@ struct VestsView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 

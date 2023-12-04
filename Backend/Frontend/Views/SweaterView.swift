@@ -4,6 +4,7 @@
 //
 //  Created by Adalia Williams on 11/27/23.
 //
+
 import SwiftUI
 
 struct SweaterView: View {
@@ -51,7 +52,6 @@ struct SweaterView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 

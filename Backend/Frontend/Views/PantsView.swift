@@ -52,7 +52,6 @@ struct PantsView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 

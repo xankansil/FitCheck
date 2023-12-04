@@ -5,7 +5,6 @@
 //  Created by Adalia Williams on 11/27/23.
 //
 
-
 import SwiftUI
 
 struct LongSkirtsView: View {
@@ -53,7 +52,6 @@ struct LongSkirtsView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 

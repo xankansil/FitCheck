@@ -5,7 +5,6 @@
 //  Created by Adalia Williams on 11/27/23.
 //
 
-
 import SwiftUI
 
 struct SneakersView: View {
@@ -53,11 +52,9 @@ struct SneakersView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 
 #Preview {
     SneakersView()
 }
-

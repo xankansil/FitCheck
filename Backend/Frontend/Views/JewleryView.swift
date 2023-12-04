@@ -52,11 +52,9 @@ struct JewleryView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 
 #Preview {
     JewleryView()
 }
-

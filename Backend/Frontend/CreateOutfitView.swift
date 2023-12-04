@@ -39,7 +39,6 @@ struct CreateOutfitView: View {
                         .resizable()
                         .frame(width: 100.0, height: 100.0)
                     
-                    
                 }
                 
                 NavigationStack{
@@ -74,4 +73,3 @@ struct CreateOutfitView_Previews: PreviewProvider {
         ContentView()
     }
 }
-

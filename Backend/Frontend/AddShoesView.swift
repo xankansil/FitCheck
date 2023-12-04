@@ -1,16 +1,12 @@
-
-
 import SwiftUI
 
 struct AddShoesView: View {
     @EnvironmentObject var newClothingItem : ClothingObject
 
-
     var body: some View {
         Text("Add Shoes")
             .font(.system(size: 50))
             
-        
         NavigationStack{
             VStack(spacing: 20) {
                 NavigationLink(destination: SeasonQuestionView()){

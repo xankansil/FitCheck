@@ -39,8 +39,6 @@ struct TopsView: View {
     }
 }
 
-
 #Preview {
     TopsView()
 }
-

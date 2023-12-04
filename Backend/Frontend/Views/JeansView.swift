@@ -52,7 +52,6 @@ struct JeansView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 

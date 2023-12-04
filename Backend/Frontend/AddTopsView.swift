@@ -4,14 +4,12 @@
 //
 //
 
-
 import SwiftUI
 
 struct AddTopView: View {
     @EnvironmentObject var newClothingItem : ClothingObject
     @State private var tops = [ClothingItem]()
 
-    
     var body: some View {
         // TODO: Testing, can remove
         //        // VERY important to check for nil with all optionals
@@ -73,8 +71,6 @@ struct AddTopView: View {
     }
 }
 
-
 #Preview {
     AddTopView()
 }
-

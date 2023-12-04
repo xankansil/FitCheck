@@ -5,7 +5,6 @@
 //  Created by Xantia Kansil on 12/3/23.
 //
 
-
 import SwiftUI
 
 struct SeasonQuestionView: View {
@@ -14,7 +13,6 @@ struct SeasonQuestionView: View {
         Text("Choose the Season:")
             .font(.system(size: 50))
             
-        
         NavigationStack{
             VStack(spacing: 20) {
                 NavigationLink(destination: OccasionQuestionView()){
@@ -39,4 +37,3 @@ struct SeasonQuestionView: View {
 #Preview {
     SeasonQuestionView()
 }
-

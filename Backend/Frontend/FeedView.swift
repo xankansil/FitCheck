@@ -21,4 +21,3 @@ struct FeedView: View {
 #Preview {
     ContentView()
 }
-

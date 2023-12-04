@@ -41,4 +41,3 @@ struct LoginView: View {
          LoginView()
      }
  }
- 

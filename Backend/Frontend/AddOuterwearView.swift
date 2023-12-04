@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct AddOuterwearView: View {
@@ -31,4 +30,3 @@ struct AddOuterwearView: View {
 #Preview {
     AddOuterwearView()
 }
-

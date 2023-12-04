@@ -52,7 +52,6 @@ struct JacketsView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 #Preview {

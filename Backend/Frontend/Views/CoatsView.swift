@@ -51,7 +51,6 @@ struct CoatsView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 

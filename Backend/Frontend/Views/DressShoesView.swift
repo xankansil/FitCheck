@@ -52,7 +52,6 @@ struct DressShoesView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 
@@ -60,4 +59,3 @@ struct DressShoesView: View {
 #Preview {
     DressShoesView()
 }
-

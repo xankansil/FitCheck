@@ -17,10 +17,6 @@ class ClothingObject: ObservableObject{
     }
 }
 
-    
-    
-    
-    
     /*UNCERTIAN IF NEEDED OR DUPLICATE CODE
     @Published var id: String?
      @Published var color: ColorType?
