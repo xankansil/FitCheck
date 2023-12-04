@@ -20,5 +20,5 @@ The closet screen displays the clothing items in the closet and allows the user 
 The profile screen shows a user's profile and displays a few fun questions about the user's fashion interest and about their closet. 
 
 
-###Features 
+### Features 
 Our app uses a Google Firebase as the server connection. The user's account information as well as closet information is stored on there. The closet data pulls from the datbase of clothing items.
