@@ -12,8 +12,8 @@ import Foundation
 class ClothingObject: ObservableObject{
     @Published var closetObject : ClothingItem
         
-    init(closetObject: ClothingItem) {
-        self.closetObject = closetObject
+    init() {
+        self.closetObject = ClothingItem()
     }
 }
 

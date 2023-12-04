@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AddTopView: View {
-    @State private var tops = [ClothingItem]()
     @EnvironmentObject var newClothingItem : ClothingObject
+    @State private var tops = [ClothingItem]()
 
     
     var body: some View {
@@ -68,7 +68,7 @@ struct AddTopView: View {
                 }
             }
         }.task {
-            newClothingItem.closetObject.category = CategoryType.fullbody
+            newClothingItem.closetObject.category = CategoryType.top
         }
     }
 }

@@ -6,7 +6,7 @@
 import SwiftUI
 
 struct AddClothingView: View {
-    //@EnvironmentObject var newClothingItem : ClothingObject
+//    @EnvironmentObject var newClothingItem : ClothingObject
     
     var body: some View {
         NavigationStack{

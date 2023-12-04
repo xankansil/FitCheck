@@ -27,7 +27,7 @@ struct AddShoesView: View {
                 }
             }
         }.task {
-            newClothingItem.closetObject.category = CategoryType.fullbody
+            newClothingItem.closetObject.category = CategoryType.shoes
         }
     }
 }
