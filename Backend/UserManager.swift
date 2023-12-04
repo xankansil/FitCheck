@@ -189,6 +189,7 @@ public enum ClothingType: String, Codable {
     // Fullbody
     case dress
     case jumpsuit
+    case overalls
     
     // Outerwear
     case jacket
@@ -204,6 +205,8 @@ public enum ClothingType: String, Codable {
     // Shoes
     case dressshoes
     case sneakers
+    case boots
+    case sandals
 }
 
 public enum OccasionType: String, Codable {

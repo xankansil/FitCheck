@@ -4,6 +4,12 @@ import SwiftUI
 
 struct AddBottomsView: View {
     @EnvironmentObject var newClothingItem : ClothingObject
+    @State private var pantsButton = false
+    @State private var jeansButton = false
+    @State private var shortsButton = false
+    @State private var shortSkirtsButton = false
+    @State private var longSkirtsButton = false
+
 
     var body: some View {
         Text("Add Bottoms")
@@ -12,21 +18,89 @@ struct AddBottomsView: View {
         
         NavigationStack{
             VStack(spacing: 20) {
-                NavigationLink(destination: SeasonQuestionView()){
-                    Text("Pants")
+                
+                
+                Button("Pants"){
+                    pantsButton.toggle()
                 }
-                NavigationLink(destination: SeasonQuestionView()){
-                    Text("Shorts")
+                if pantsButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Pants")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.pants
+                        print("HELLO pants")
+                    }
                 }
-                NavigationLink(destination: SeasonQuestionView()){
-                    Text("Short Skirts")
+                
+                Button("Jeans"){
+                    jeansButton.toggle()
                 }
-                NavigationLink(destination: SeasonQuestionView()){
-                    Text("Long Skirts")
+                if jeansButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Jeans")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.jeans
+                        print("HELLO jeans")
+                    }
                 }
+                
+                Button("Shorts"){
+                    shortsButton.toggle()
+                }
+                if shortsButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Shorts")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.shorts
+                        print("HELLO shorts")
+                    }
+                }
+                
+                Button("Short Skirts"){
+                    shortSkirtsButton.toggle()
+                }
+                if shortSkirtsButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Short Skirts")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.shortskirt
+                        print("HELLO short skirts")
+                    }
+                }
+                
+                Button("Long Skirts"){
+                    longSkirtsButton.toggle()
+                }
+                if longSkirtsButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Long Skirts")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.longskirt
+                        print("HELLO long skirts")
+                    }
+                }
+                
+                
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Pants")
+//                }
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Jeans")
+//                }
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Shorts")
+//                }
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Short Skirts")
+//                }
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Long Skirts")
+//                }
             }
         }.task {
             newClothingItem.closetObject.category = CategoryType.bottom
+            print("hi")
+            
         }
     }
 }
