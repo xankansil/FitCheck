@@ -11,8 +11,6 @@ struct AddShoesView: View {
 
 
     var body: some View {
-        Text("Add Shoes")
-            .font(.system(size: 50))
             
         
         NavigationStack{
@@ -85,7 +83,7 @@ struct AddShoesView: View {
 //                NavigationLink(destination: SeasonQuestionView()){
 //                    Text("Sandals")
 //                }
-            }
+            }.navigationTitle("Add Shoes")
         }.task {
             newClothingItem.closetObject.category = CategoryType.shoes
         }

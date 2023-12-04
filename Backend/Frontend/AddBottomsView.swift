@@ -12,8 +12,6 @@ struct AddBottomsView: View {
 
 
     var body: some View {
-        Text("Add Bottoms")
-            .font(.system(size: 50))
             
         
         NavigationStack{
@@ -96,7 +94,7 @@ struct AddBottomsView: View {
 //                NavigationLink(destination: SeasonQuestionView()){
 //                    Text("Long Skirts")
 //                }
-            }
+            }.navigationTitle("Add Bottoms")
         }.task {
             newClothingItem.closetObject.category = CategoryType.bottom
             print("hi")

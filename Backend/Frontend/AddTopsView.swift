@@ -53,8 +53,6 @@ struct AddTopView: View {
         //        } else {
         //            Text("User info not found.")
         //        }
-        Text("Add Tops")
-            .font(.system(size: 50))
         
         NavigationStack{
             VStack(spacing: 20) {
@@ -137,7 +135,7 @@ struct AddTopView: View {
 //                NavigationLink(destination: SeasonQuestionView()){
 //                    Text("Cardigans")
 //                }
-            }
+            }.navigationTitle("Add Tops")
         }.task {
             newClothingItem.closetObject.category = CategoryType.top
         }

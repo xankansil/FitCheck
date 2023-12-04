@@ -10,8 +10,6 @@ struct AddFullBodyView: View {
 
 
     var body: some View {
-        Text("Add Full Body")
-            .font(.system(size: 50))
             
         
         NavigationStack{
@@ -65,7 +63,7 @@ struct AddFullBodyView: View {
 //                NavigationLink(destination: SeasonQuestionView()){
 //                    Text("Jumpsuits")
 //                }
-            }
+            }.navigationTitle("Add Full Body")
         }.task {
             newClothingItem.closetObject.category = CategoryType.fullbody
         }

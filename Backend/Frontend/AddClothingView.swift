@@ -16,18 +16,44 @@ struct AddClothingView: View {
                 NavigationLink(destination: AddTopView()){
                     //newClothingItem.closetObject.category = CategoryType.top
                     Text("ADD TOPS")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+
                 }
                 NavigationLink(destination: AddBottomsView()){
                     Text("ADD BOTTOMS")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: AddFullBodyView()){
                     Text("ADD FULL BODY")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: AddOuterwearView()){
                     Text("ADD OUTERWEAR")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: AddShoesView()){
                     Text("ADD SHOES")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
             }
             .navigationTitle("Add Clothing")
