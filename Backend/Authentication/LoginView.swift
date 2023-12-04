@@ -10,6 +10,10 @@ import SwiftUI
 struct LoginView: View {
     var body: some View {
         VStack{
+            Text("Hello! Welcome to FitCheck!")
+                .font(.system(size: 20))
+                .fontWeight(.bold)
+
             NavigationLink{
                 LoginEmail()
             } label: {
@@ -20,6 +24,12 @@ struct LoginView: View {
                     .background(Color.blue)
                     .cornerRadius(10.0)
             }
+            
+            Text("New User? Create an account below!")
+                .font(.system(size: 20))
+                .multilineTextAlignment(.center)
+                .fontWeight(.bold)
+            
             NavigationLink{
                 CreateAcc()
             } label: {

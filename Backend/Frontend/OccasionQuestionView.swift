@@ -9,6 +9,15 @@
 import SwiftUI
 
 struct OccasionQuestionView: View {
+    @EnvironmentObject var newClothingItem : ClothingObject
+    
+    @State private var casualButton = false
+    @State private var fancyButton = false
+    @State private var loungewearButton = false
+    @State private var holidayButton = false
+    @State private var partyButton = false
+
+
 
     var body: some View {
         Text("Choose the Occasion:")
@@ -17,21 +26,83 @@ struct OccasionQuestionView: View {
         
         NavigationStack{
             VStack(spacing: 20) {
-                NavigationLink(destination: ColorQuestionView()){
-                    Text("Casual")
+                
+                Button("Casual"){
+                    casualButton.toggle()
                 }
-                NavigationLink(destination: ColorQuestionView()){
-                    Text("Fancy")
+                if casualButton{
+                    NavigationLink(destination: ColorQuestionView()){
+                        Text("Casual")
+                    }.task {
+                        newClothingItem.closetObject.occasion = OccasionType.casual
+                        print("HELLO casual")
+                    }
                 }
-                NavigationLink(destination: ColorQuestionView()){
-                    Text("Loungewear")
+                
+                Button("Fancy"){
+                    fancyButton.toggle()
                 }
-                NavigationLink(destination: ColorQuestionView()){
-                    Text("Holiday")
+                if fancyButton{
+                    NavigationLink(destination: ColorQuestionView()){
+                        Text("Fancy")
+                    }.task {
+                        newClothingItem.closetObject.occasion = OccasionType.fancy
+                        print("HELLO fancy")
+                    }
                 }
-                NavigationLink(destination: ColorQuestionView()){
-                    Text("Party")
+                
+                Button("Loungewear"){
+                    loungewearButton.toggle()
                 }
+                if loungewearButton{
+                    NavigationLink(destination: ColorQuestionView()){
+                        Text("Loungewear")
+                    }.task {
+                        newClothingItem.closetObject.occasion = OccasionType.loungewear
+                        print("HELLO loungewear")
+                    }
+                }
+                
+                Button("Holiday"){
+                    holidayButton.toggle()
+                }
+                if holidayButton{
+                    NavigationLink(destination: ColorQuestionView()){
+                        Text("Holiday")
+                    }.task {
+                        newClothingItem.closetObject.occasion = OccasionType.holiday
+                        print("HELLO holiday")
+                    }
+                }
+                
+                Button("Party"){
+                    partyButton.toggle()
+                }
+                if partyButton{
+                    NavigationLink(destination: ColorQuestionView()){
+                        Text("Party")
+                    }.task {
+                        newClothingItem.closetObject.occasion = OccasionType.party
+                        print("HELLO party")
+                    }
+                }
+                
+                
+//                NavigationLink(destination: ColorQuestionView()){
+//                    Text("Casual")
+//                }
+//                NavigationLink(destination: ColorQuestionView()){
+//                    Text("Fancy")
+//                }
+//                NavigationLink(destination: ColorQuestionView()){
+//                    Text("Loungewear")
+//                }
+//                NavigationLink(destination: ColorQuestionView()){
+//                    Text("Holiday")
+//                }
+//                NavigationLink(destination: ColorQuestionView()){
+//                    Text("Party")
+//                }
                
             }
         }

@@ -4,12 +4,21 @@
 //
 //
 
+
 import SwiftUI
 
 struct AddTopView: View {
     @EnvironmentObject var newClothingItem : ClothingObject
     @State private var tops = [ClothingItem]()
+    
+    @State private var tankTopsButton = false
+    @State private var shortSleeveButton = false
+    @State private var longSleeveButton = false
+    @State private var sweatersButton = false
+    @State private var cardiganButton = false
 
+
+    
     var body: some View {
         // TODO: Testing, can remove
         //        // VERY important to check for nil with all optionals
@@ -44,33 +53,97 @@ struct AddTopView: View {
         //        } else {
         //            Text("User info not found.")
         //        }
-        Text("Add Tops")
-            .font(.system(size: 50))
         
         NavigationStack{
             VStack(spacing: 20) {
-                NavigationLink(destination: SeasonQuestionView()){
-                    Text("Tank Tops")
+                
+                Button("Tank Tops"){
+                    tankTopsButton.toggle()
                 }
-                NavigationLink(destination: SeasonQuestionView()){
-                    Text("Short Sleeve")
+                if tankTopsButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Tank Tops")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.tanktop
+                        print("HELLO tanktop")
+                    }
                 }
-                NavigationLink(destination: SeasonQuestionView()){
-                    Text("Long Sleeves")
+                
+                Button("Short Sleeve"){
+                    shortSleeveButton.toggle()
                 }
-                NavigationLink(destination: SeasonQuestionView()){
-                    Text("Sweaters")
+                if shortSleeveButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Short Sleeve")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.shortsleeve
+                        print("HELLO shortsleeve")
+                    }
                 }
-                NavigationLink(destination: SeasonQuestionView()){
-                    Text("Cardigans")
+                
+                Button("Long Sleeve"){
+                    longSleeveButton.toggle()
                 }
-            }
+                if longSleeveButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Long Sleeve")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.longsleeve
+                        print("HELLO longsleeve")
+                    }
+                }
+                
+                Button("Sweaters"){
+                    sweatersButton.toggle()
+                }
+                if sweatersButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Sweaters")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.sweater
+                        print("HELLO sweater")
+                    }
+                }
+                
+                Button("Cardigan"){
+                    cardiganButton.toggle()
+                }
+                if cardiganButton{
+                    NavigationLink(destination: SeasonQuestionView()){
+                        Text("Cardigans")
+                    }.task {
+                        newClothingItem.closetObject.clothing = ClothingType.cardigan
+                        print("HELLO cardigan")
+                    }
+                }
+                
+                
+                
+                
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Tank Tops")
+//                }
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Short Sleeve")
+//                }
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Long Sleeves")
+//                }
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Sweaters")
+//                }
+//                NavigationLink(destination: SeasonQuestionView()){
+//                    Text("Cardigans")
+//                }
+            }.navigationTitle("Add Tops")
         }.task {
             newClothingItem.closetObject.category = CategoryType.top
         }
     }
 }
 
+
 #Preview {
     AddTopView()
 }
+
