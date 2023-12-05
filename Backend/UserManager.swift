@@ -745,7 +745,7 @@ final class UserManager {
         let outfitsRef = outfitsRef(userID: userID)
         
         // Using one-line, field-based version (best practice as there is no need to supply "tempID")
-        let partyShorts = try await addClothingItem(userID: userID,
+       /* let partyShorts = try await addClothingItem(userID: userID,
                                                     color: ColorType.green,
                                                     category: CategoryType.bottom,
                                                     clothing: ClothingType.shorts,
@@ -756,6 +756,7 @@ final class UserManager {
                                                     timesWorn: 10,
                                                     favorite: true,
                                                     img_url: "IMG_22K.jpg")
+        */
         
         let partyShirt = try await addClothingItem(userID: userID,
                                                     color: ColorType.green,
@@ -781,7 +782,7 @@ final class UserManager {
                                                     favorite: true,
                                                     img_url: "shirt2")
         
-        let top2 = try await addClothingItem(userID: userID,
+        /*let top2 = try await addClothingItem(userID: userID,
                                                     color: ColorType.green,
                                                     category: CategoryType.top,
                                                     clothing: ClothingType.longsleeve,
@@ -792,6 +793,7 @@ final class UserManager {
                                                     timesWorn: 10,
                                                     favorite: true,
                                                     img_url: "longsleeve image.jpg")
+         */
         
         // Testing queries on clothingItems
         let clothingQuery = closetRef.whereField("color", isEqualTo: "red")
@@ -811,7 +813,7 @@ final class UserManager {
         // Testing getting a single clothing item
         let testItem = try await getClothingItem(userID: userID, clothingID: clothingList1[0])
         
-        // Adding outfit directly to the databse (must set id to "tempID" so we can update it in the function)
+        /*// Adding outfit directly to the databse (must set id to "tempID" so we can update it in the function)
         let dummyOutfit1 = Outfit(
             id: "tempID",
             label: "entire wardrobe",
@@ -838,6 +840,7 @@ final class UserManager {
                                                 favorite: true,
                                                 dateAdded: Date(),
                                                 mostRecWear: Date())
+         */
         
         // Testing getting outfits
         let allOutfits = try await getAllOutfits(userID: userID)
@@ -849,6 +852,7 @@ final class UserManager {
         let multicolorOutfits = try await getOutfits(userID: userID, query: outfitQuery)
         
         // Testing adding a piece to an outfit (will not add repeats)
+        /*
         try await addClothingToOutfit(userID: userID, outfitID: redBlueOutfit!.id!, clothingID: partyShorts!.id!)
         try await addClothingToOutfit(userID: userID, outfitID: redBlueOutfit!.id!, clothingID: partyShorts!.id!)
         
@@ -862,6 +866,7 @@ final class UserManager {
         
         // Testing deleting an outfit
         try await deleteOutfit(userID: userID, outfitID: redBlueOutfit!.id!)
+         */
         
         // Testing deleting this user (should also throw you back to the login/create user screen)
         // try await deleteUser(userID: userID)
