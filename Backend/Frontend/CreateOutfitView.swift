@@ -21,6 +21,7 @@ struct CreateOutfitView: View {
                 Text("Create an Outfit")
                     .bold()
                     .font(.title)
+                    .padding([.top], 30)
                 let userInfo = UserManager.shared.getLoadedData()
                 if (userInfo != nil){
                     if(userInfo!.id != nil) {

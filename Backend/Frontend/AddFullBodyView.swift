@@ -10,7 +10,7 @@ struct AddFullBodyView: View {
 
 
     var body: some View {
-            
+        
         
         NavigationStack{
             VStack(spacing: 20) {

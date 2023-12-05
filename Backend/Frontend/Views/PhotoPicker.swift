@@ -42,7 +42,7 @@ struct PhotoPicker: View {
         .onChange(of: selectedItem, perform: { newValue in
             if let newValue {
                 // Generate a unique id for the picture on-the-fly
-                let uuid = "\(UUID().uuidString)"
+                let uuid = "\(UUID().uuidString).jpeg"
                 newClothingItem.closetObject.img_url = uuid
                 // Also saves the clothingObject to the database!
                 saveImage(item: newValue, uuid: uuid, clothingData: newClothingItem.closetObject)
@@ -75,6 +75,7 @@ func saveImage(item: PhotosPickerItem, uuid: String, clothingData: ClothingItem)
         // Setting the ID to tempID is very important when adding a clothingItem directly!
         var item = clothingData
         item.id = "tempID"
+        item.favorite = true
         if let userID = UserManager.shared.getLoadedData()?.id{
             try await UserManager.shared.addClothingItem(userID: userID, clothingData: item)
         }

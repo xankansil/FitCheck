@@ -12,6 +12,9 @@ import PhotosUI
 
 final class StorageManager {
     
+    // TODO: add proper queries and stuff to Xan's profile view
+    // TODO: add gradients lol
+    
     static let shared = StorageManager()
     private init() {}
     
@@ -33,7 +36,7 @@ final class StorageManager {
         let meta = StorageMetadata()
         meta.contentType = "image/jpeg"
         
-        let path = "\(uuid).jpeg"
+        let path = "\(uuid)"
         let returnedMetaData = try await userReference(userID: userID).child("images").child(path).putDataAsync(data, metadata: meta)
         
         guard let returnedPath = returnedMetaData.path, let returnedName = returnedMetaData.name else {

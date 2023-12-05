@@ -51,7 +51,7 @@
 
 // In-Progress
 // TODO: potential huge problem w/ getLoadedData async workaround currently in place
-// TODO: add img_url fields to all structs
+// TODO: add img_url fields to all structs  (Done!)
 // TODO: favorite clothes and favorite shoes in profile
 // TODO: deleteUser function and deleteAllUsers that works for both firestore and authentication database (john help pls)
 // TODO: make it so deleteUser sets you back to the login view (frontend help pls)
@@ -463,7 +463,7 @@ final class UserManager {
             date_added: Date(),
             most_rec_wear: nil,
             times_worn: 6,
-            favorite: true,
+            favorite: false,
             img_url: "bluePants"
         )
         
@@ -543,7 +543,7 @@ final class UserManager {
             date_added: Date(),
             most_rec_wear: nil,
             times_worn: 3,
-            favorite: true,
+            favorite: false,
             img_url: "blackDress"
         )
         
@@ -575,7 +575,7 @@ final class UserManager {
             date_added: Date(),
             most_rec_wear: nil,
             times_worn: 8,
-            favorite: true,
+            favorite: false,
             img_url: "orangeJacket"
         )
 
@@ -716,7 +716,7 @@ final class UserManager {
                 fit_pieces: clothingItemsToIDs(items: outFitList2),
                 fit_colors: [ColorType.black, ColorType.red],
                 occasion: OccasionType.fancy,
-                favorite: true,
+                favorite: false,
                 date_added: Date(),
                 most_rec_wear: Date(),
                 img_url: "favOutfit"
@@ -796,7 +796,7 @@ final class UserManager {
                                                     dateAdded: Date(),
                                                     mostRecWear: Date(),
                                                     timesWorn: 10,
-                                                    favorite: true,
+                                                    favorite: false,
                                                     img_url: "shirt1")
         
         let top1 = try await addClothingItem(userID: userID,
@@ -808,7 +808,7 @@ final class UserManager {
                                                     dateAdded: Date(),
                                                     mostRecWear: Date(),
                                                     timesWorn: 10,
-                                                    favorite: true,
+                                                    favorite: false,
                                                     img_url: "shirt2")
         
         /*let top2 = try await addClothingItem(userID: userID,
