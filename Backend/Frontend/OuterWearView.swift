@@ -30,8 +30,6 @@ struct OuterWearView: View {
     }
 }
 
-
 #Preview {
     OuterWearView()
 }
-

@@ -29,7 +29,6 @@ struct SUImagePickerView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
         // Nothing to update here
     }
-
 }
 
 class ImagePickerViewCoordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -52,5 +51,4 @@ class ImagePickerViewCoordinator: NSObject, UINavigationControllerDelegate, UIIm
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.isPresented = false
     }
-    
 }

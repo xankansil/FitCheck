@@ -52,11 +52,9 @@ struct CardiganView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 
 #Preview {
     CardiganView()
 }
-

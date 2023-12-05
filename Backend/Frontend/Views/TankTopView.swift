@@ -52,7 +52,6 @@ struct TankTopView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 

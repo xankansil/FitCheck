@@ -52,7 +52,6 @@ struct HatsView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 

@@ -52,11 +52,9 @@ struct ShortsView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 
 #Preview {
     ShortsView()
 }
-

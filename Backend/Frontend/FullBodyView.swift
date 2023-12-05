@@ -5,8 +5,6 @@
 //  Created by Adalia Williams on 11/26/23.
 //
 
-
-
 import SwiftUI
 
 struct FullBodyView: View {
@@ -34,6 +32,3 @@ struct FullBodyView: View {
 #Preview {
     FullBodyView()
 }
-
-
-

@@ -1,5 +1,3 @@
-
-
 import SwiftUI
 
 struct AddBottomsView: View {
@@ -133,4 +131,3 @@ struct AddBottomsView: View {
 #Preview {
     AddBottomsView()
 }
-

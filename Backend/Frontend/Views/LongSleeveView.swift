@@ -52,7 +52,6 @@ struct LongSleeveView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 

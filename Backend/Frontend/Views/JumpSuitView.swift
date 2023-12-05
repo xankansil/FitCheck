@@ -52,11 +52,9 @@ struct JumpSuitView: View {
         } else {
             Text("user info not found")
         }
-        
     }
 }
 
 #Preview {
     JumpSuitView()
 }
-
