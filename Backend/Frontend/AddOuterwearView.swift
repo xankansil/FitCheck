@@ -65,17 +65,6 @@ struct AddOuterwearView: View {
                     }
                 }
                 
-                
-                
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Jackets")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Coats")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Vests")
-//                }
             }.navigationTitle("Add Outerwear")
         }.task {
             newClothingItem.closetObject.category = CategoryType.outerwear

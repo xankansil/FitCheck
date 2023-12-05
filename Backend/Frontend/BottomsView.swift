@@ -10,29 +10,50 @@ import SwiftUI
 struct BottomsView: View {
 
     var body: some View {
-        Text("Bottoms")
-            .font(.system(size: 30))
-            .foregroundStyle(.indigo)
-            .border(Color.white)
         NavigationView{
             VStack(spacing: 20) {
                 NavigationLink(destination: PantsView()){
                     Text("Pants")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: ShortsView()){
                     Text("Shorts")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: LongSkirtsView()){
                     Text("Long Skirts")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: ShortSkirtsView()){
                     Text("Short Skirts")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: JeansView()){
                     Text("Jeans")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
             }
-        }
+        }.navigationTitle("My Bottoms")
     }
 }
 

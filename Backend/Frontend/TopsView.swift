@@ -10,32 +10,53 @@ import SwiftUI
 struct TopsView: View {
 
     var body: some View {
-        Text("Tops")
-            .font(.system(size: 30))
-            .foregroundStyle(.indigo)
-            .border(Color.white)
         
         NavigationView{
             VStack(spacing: 20) {
                 NavigationLink(destination: TankTopView()){
                     Text("Tank Tops")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 
                 NavigationLink(destination: ShortSleeveView()){
                     Text("Short Sleeve")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 
                 NavigationLink(destination: LongSleeveView()){
                     Text("Long Sleeves")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: SweaterView()){
                     Text("Sweaters")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: CardiganView()){
                     Text("Cardigans")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
             }
-        }
+        }.navigationTitle("My Tops")
     }
 }
 

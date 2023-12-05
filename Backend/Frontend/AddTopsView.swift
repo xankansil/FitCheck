@@ -142,24 +142,6 @@ struct AddTopView: View {
                     }
                 }
                 
-                
-                
-                
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Tank Tops")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Short Sleeve")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Long Sleeves")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Sweaters")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Cardigans")
-//                }
             }.navigationTitle("Add Tops")
         }.task {
             newClothingItem.closetObject.category = CategoryType.top

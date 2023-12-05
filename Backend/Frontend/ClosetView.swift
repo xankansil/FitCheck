@@ -15,55 +15,77 @@ struct ClosetView: View {
             spacing: 10
         ) {
             //display the appname above buttons
-            Text("Closet")
-                .font(.system(size: 30))
-                .foregroundStyle(.indigo)
-                .border(Color.white)
             
             NavigationStack{
-                VStack(spacing: 180)
+                VStack(spacing: 30)
                 {
                     HStack(
-                        spacing: 80
+                        spacing: 20
                     ) {
                         //make the button in a navigation link
-                        
                         NavigationLink(destination: TopsView()){
                             Text("TOPS")
-                            
+                                .padding()
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .fontWeight(.bold)
+                                .font(.system(size: 20))
                         }
-                        
-                        
                         NavigationLink(destination: BottomsView()){
                             Text("BOTTOMS")
+                                .padding()
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .fontWeight(.bold)
+                                .font(.system(size: 20))
                         }
                     }
                     
                     HStack(
-                        spacing: 70
+                        spacing: 20
                     ) {
                         NavigationLink(destination: FullBodyView()){
                             Text("FULL BODY")
+                                .padding()
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .fontWeight(.bold)
+                                .font(.system(size: 20))
                         }
         
                         NavigationLink(destination: OuterWearView()){
                             Text("OUTERWEAR")
+                                .padding()
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .fontWeight(.bold)
+                                .font(.system(size: 20))
                         }
                         
                     }
                     
                     HStack(
-                        spacing: 90
+                        spacing: 20
                     ) {
                         NavigationLink(destination: AccessoriesView()){
                             Text("ACCESSORIES")
+                                .padding()
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .fontWeight(.bold)
+                                .font(.system(size: 20))
                         }
                         
                         NavigationLink(destination: ShoesView()){
                             Text("SHOES")
+                                .padding()
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .fontWeight(.bold)
+                                .font(.system(size: 20))
                         }
                     }
-                }
+                }.navigationTitle("My Closet")
             }
         }
     }

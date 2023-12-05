@@ -10,21 +10,27 @@ import SwiftUI
 struct ShoesView: View {
 
     var body: some View {
-        Text("Shoes")
-            .font(.system(size: 30))
-            .foregroundStyle(.indigo)
-            .border(Color.white)
         
         NavigationView{
             VStack(spacing: 20) {
                 NavigationLink(destination: SneakersView()){
                     Text("Sneakers")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: DressShoesView()){
                     Text("Dress Shoes")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
             }
-        }
+        }.navigationTitle("My Shoes")
     }
 }
 

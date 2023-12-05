@@ -12,10 +12,6 @@ struct ShortSleeveView: View {
     @State private var shortsleeves = [ClothingItem]()
     
     var body: some View {
-        Text("Short Sleeves")
-            .font(.system(size: 30))
-            .foregroundStyle(.indigo)
-            .border(Color.white)
         let userInfo = UserManager.shared.getLoadedData()
         if (userInfo != nil){
             if(userInfo!.id != nil) {
@@ -47,7 +43,7 @@ struct ShortSleeveView: View {
                         shortsleeves = []
                         print("error loading data in short sleeve view")
                     }
-                }
+                }.navigationTitle("My Short Sleeves")
             }
         } else {
             Text("user info not found")

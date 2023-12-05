@@ -85,24 +85,6 @@ struct AddShoesView: View {
                     }
                 }
                 
-                
-                
-                
-                
-//                
-//                
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Sneakers")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Boots")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Dress Shoes")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Sandals")
-//                }
             }.navigationTitle("Add Shoes")
         }.task {
             newClothingItem.closetObject.category = CategoryType.shoes

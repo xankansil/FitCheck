@@ -66,18 +66,6 @@ struct AddFullBodyView: View {
                     }
                 }
                 
-                
-                
-                
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Dresses")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Overalls")
-//                }
-//                NavigationLink(destination: SeasonQuestionView()){
-//                    Text("Jumpsuits")
-//                }
             }.navigationTitle("Add Full Body")
         }.task {
             newClothingItem.closetObject.category = CategoryType.fullbody

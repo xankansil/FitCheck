@@ -10,21 +10,27 @@ import SwiftUI
 struct FullBodyView: View {
     
     var body: some View {
-        Text("Full Body")
-            .font(.system(size: 30))
-            .foregroundStyle(.indigo)
-            .border(Color.white)
         
         NavigationView{
             VStack(spacing: 20) {
                 NavigationLink(destination: JumpSuitView()) {
                     Text("Jumpsuits")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: DressesView()) {
                     Text("Dresses")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
             }
-        }
+        }.navigationTitle("My Fullbody Items")
     }
 }
 

@@ -10,24 +10,35 @@ import SwiftUI
 struct AccessoriesView: View {
 
     var body: some View {
-        Text("Accessories")
-            .font(.system(size: 30))
-            .foregroundStyle(.indigo)
-            .border(Color.white)
         NavigationView{
             VStack(spacing: 20) {
                 NavigationLink(destination: JewleryView()){
                     Text("Jewlery")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: HatsView()){
                     Text("Hats")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 NavigationLink(destination: ScarfsView()){
                     Text("Scarfs")
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
                 }
                 
             }
-        }
+        }.navigationTitle("My Accessories")
     }
 }
 
