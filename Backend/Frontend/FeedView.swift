@@ -21,11 +21,13 @@ struct FeedView: View {
                         ForEach(outfits, id:\.id) { item in
                             if (item.img_url != nil){
                                 //Text(item.img_url!)
+                                
                                 Image(uiImage: UIImage(named: item.img_url!)!)
                                     .resizable()
                                     .frame(width: 200, height: 200)
                                     .aspectRatio(contentMode: .fit)
                                     .scaledToFit()
+                                
                                 Text(item.label!)
                                     .multilineTextAlignment(.leading)
                                 
