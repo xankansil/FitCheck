@@ -20,7 +20,8 @@ struct SeasonQuestionView: View {
 
     var body: some View {
         Text("Choose the Season:")
-            .font(.system(size: 50))
+            .font(.system(size: 30))
+            .fontWeight(.bold)
             
         
         NavigationStack{
@@ -28,10 +29,15 @@ struct SeasonQuestionView: View {
                 
                 Button("Fall"){
                     fallButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if fallButton{
                     NavigationLink(destination: OccasionQuestionView()){
-                        Text("Fall")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.weather = WeatherType.fall
                         print("HELLO fall")
@@ -40,10 +46,15 @@ struct SeasonQuestionView: View {
                 
                 Button("Winter"){
                     winterButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if winterButton{
                     NavigationLink(destination: OccasionQuestionView()){
-                        Text("Winter")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.weather = WeatherType.winter
                         print("HELLO winter")
@@ -52,10 +63,15 @@ struct SeasonQuestionView: View {
                 
                 Button("Spring"){
                     springButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if springButton{
                     NavigationLink(destination: OccasionQuestionView()){
-                        Text("Spring")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.weather = WeatherType.spring
                         print("HELLO spring")
@@ -64,10 +80,15 @@ struct SeasonQuestionView: View {
                 
                 Button("Summer"){
                     summerButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if summerButton{
                     NavigationLink(destination: OccasionQuestionView()){
-                        Text("Summer")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.weather = WeatherType.summer
                         print("HELLO fall")

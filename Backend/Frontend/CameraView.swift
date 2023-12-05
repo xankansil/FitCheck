@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct CameraView: View {
+    @EnvironmentObject var newClothingItem : ClothingObject
     
     @State private var image: Image? = Image("karthick")
     @State private var shouldPresentImagePicker = false
@@ -15,6 +16,12 @@ struct CameraView: View {
             .padding()
             .background(.blue)
             .foregroundStyle(.white)
+        
+//        print(\(newClothingItem.closetObject.category))
+//        print(\(closetObject.clothing))
+//        print(\(closetObject.weather))
+//        print(\(closetObject.occasion))
+//        print(\(closetObject.color))
         
         image!
             .resizable()

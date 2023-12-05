@@ -59,10 +59,15 @@ struct AddTopView: View {
                 
                 Button("Tank Tops"){
                     tankTopsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if tankTopsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Tank Tops")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.tanktop
                         print("HELLO tanktop")
@@ -71,10 +76,15 @@ struct AddTopView: View {
                 
                 Button("Short Sleeve"){
                     shortSleeveButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if shortSleeveButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Short Sleeve")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.shortsleeve
                         print("HELLO shortsleeve")
@@ -83,10 +93,15 @@ struct AddTopView: View {
                 
                 Button("Long Sleeve"){
                     longSleeveButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if longSleeveButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Long Sleeve")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.longsleeve
                         print("HELLO longsleeve")
@@ -95,22 +110,32 @@ struct AddTopView: View {
                 
                 Button("Sweaters"){
                     sweatersButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if sweatersButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Sweaters")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.sweater
                         print("HELLO sweater")
                     }
                 }
                 
-                Button("Cardigan"){
+                Button("Cardigans"){
                     cardiganButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if cardiganButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Cardigans")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.cardigan
                         print("HELLO cardigan")

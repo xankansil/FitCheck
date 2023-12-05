@@ -27,143 +27,220 @@ struct ColorQuestionView: View {
 
     var body: some View {
         Text("Choose the Color:")
-            .font(.system(size: 50))
+            .font(.system(size: 30))
+            .fontWeight(.bold)
+        
+
             
         
         NavigationStack{
             VStack(spacing: 20) {
                 
-                Button("Red"){
-                    redButton.toggle()
-                }
-                if redButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Red")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.red
-                        print("HELLO red")
+                HStack(spacing: 20){
+                    Button("Red"){
+                        redButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if redButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.red
+                            print("HELLO red")
+                            
+                        }
                     }
+                    
+                    Button("Orange"){
+                        orangeButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if orangeButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.orange
+                            print("HELLO orange")
+                        }
+                    }
+                    
+                    Button("Yellow"){
+                        yellowButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if yellowButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.yellow
+                            print("HELLO yellow")
+                        }
+                    }
+                    
+                    
                 }
                 
-                Button("Orange"){
-                    orangeButton.toggle()
-                }
-                if orangeButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Orange")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.orange
-                        print("HELLO orange")
+                
+                HStack(spacing: 20){
+                    Button("Green"){
+                        greenButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if greenButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.green
+                            print("HELLO green")
+                        }
                     }
+                    
+                    Button("Blue"){
+                        blueButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if blueButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.blue
+                            print("HELLO blue")
+                        }
+                    }
+                    
+                    Button("Purple"){
+                        purpleButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if purpleButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.purple
+                            print("HELLO purple")
+                        }
+                    }
+                    
                 }
                 
-                Button("Yellow"){
-                    yellowButton.toggle()
-                }
-                if yellowButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Yellow")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.yellow
-                        print("HELLO yellow")
+                HStack(spacing: 20){
+                    Button("Pink"){
+                        pinkButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if pinkButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.pink
+                            print("HELLO pink")
+                        }
                     }
+                    
+                    Button("Black"){
+                        blackButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if blackButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.black
+                            print("HELLO black")
+                        }
+                    }
+                    
+                    Button("White"){
+                        whiteButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if whiteButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.white
+                            print("HELLO white")
+                        }
+                    }
+                    
                 }
                 
-                Button("Green"){
-                    greenButton.toggle()
-                }
-                if greenButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Green")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.green
-                        print("HELLO green")
+                
+                HStack(spacing: 20){
+                    Button("Brown"){
+                        brownButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if brownButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.brown
+                            print("HELLO brown")
+                        }
                     }
+                    
+                    Button("Multi Color"){
+                        multicolorButton.toggle()
+                    }.padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                    if multicolorButton{
+                        NavigationLink(destination: CameraView()){
+                            Image(systemName: "arrow.forward.square")
+                                .font(.system(size: 30, weight: .bold))
+                        }.task {
+                            newClothingItem.closetObject.color = ColorType.multicolor
+                            print("HELLO multi")
+                        }
+                    }
+                    
+                    
                 }
                 
-                Button("Blue"){
-                    blueButton.toggle()
-                }
-                if blueButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Blue")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.blue
-                        print("HELLO blue")
-                    }
-                }
                 
-                Button("Purple"){
-                    purpleButton.toggle()
-                }
-                if purpleButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Purple")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.purple
-                        print("HELLO purple")
-                    }
-                }
-                
-                Button("Pink"){
-                    pinkButton.toggle()
-                }
-                if pinkButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Pink")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.pink
-                        print("HELLO pink")
-                    }
-                }
-                
-                Button("Black"){
-                    blackButton.toggle()
-                }
-                if blackButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Black")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.black
-                        print("HELLO black")
-                    }
-                }
-                
-                Button("White"){
-                    whiteButton.toggle()
-                }
-                if whiteButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("White")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.white
-                        print("HELLO white")
-                    }
-                }
-                
-                Button("Brown"){
-                    brownButton.toggle()
-                }
-                if brownButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Brown")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.brown
-                        print("HELLO brown")
-                    }
-                }
-                
-                Button("Multi Color"){
-                    multicolorButton.toggle()
-                }
-                if multicolorButton{
-                    NavigationLink(destination: CameraView()){
-                        Text("Multi Color")
-                    }.task {
-                        newClothingItem.closetObject.color = ColorType.multicolor
-                        print("HELLO multi")
-                    }
-                }
                 
                 
                 

@@ -18,10 +18,15 @@ struct AddShoesView: View {
                 
                 Button("Sneakers"){
                     sneakersButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if sneakersButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Sneakers")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.sneakers
                         print("HELLO sneakers")
@@ -30,10 +35,15 @@ struct AddShoesView: View {
                 
                 Button("Boots"){
                     bootsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if bootsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Boots")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.boots
                         print("HELLO boots")
@@ -42,10 +52,15 @@ struct AddShoesView: View {
                 
                 Button("Dress Shoes"){
                     dressShoesButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if dressShoesButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Dress Shoes")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.dressshoes
                         print("HELLO dress shoes")
@@ -55,10 +70,15 @@ struct AddShoesView: View {
                 
                 Button("Sandals"){
                     sandalsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if sandalsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Sandals")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.sandals
                         print("HELLO sandals")

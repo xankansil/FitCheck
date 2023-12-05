@@ -21,7 +21,8 @@ struct OccasionQuestionView: View {
 
     var body: some View {
         Text("Choose the Occasion:")
-            .font(.system(size: 50))
+            .font(.system(size: 30))
+            .fontWeight(.bold)
             
         
         NavigationStack{
@@ -29,10 +30,15 @@ struct OccasionQuestionView: View {
                 
                 Button("Casual"){
                     casualButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if casualButton{
                     NavigationLink(destination: ColorQuestionView()){
-                        Text("Casual")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.occasion = OccasionType.casual
                         print("HELLO casual")
@@ -41,10 +47,15 @@ struct OccasionQuestionView: View {
                 
                 Button("Fancy"){
                     fancyButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if fancyButton{
                     NavigationLink(destination: ColorQuestionView()){
-                        Text("Fancy")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.occasion = OccasionType.fancy
                         print("HELLO fancy")
@@ -53,10 +64,15 @@ struct OccasionQuestionView: View {
                 
                 Button("Loungewear"){
                     loungewearButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if loungewearButton{
                     NavigationLink(destination: ColorQuestionView()){
-                        Text("Loungewear")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.occasion = OccasionType.loungewear
                         print("HELLO loungewear")
@@ -65,10 +81,15 @@ struct OccasionQuestionView: View {
                 
                 Button("Holiday"){
                     holidayButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if holidayButton{
                     NavigationLink(destination: ColorQuestionView()){
-                        Text("Holiday")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.occasion = OccasionType.holiday
                         print("HELLO holiday")
@@ -77,10 +98,15 @@ struct OccasionQuestionView: View {
                 
                 Button("Party"){
                     partyButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if partyButton{
                     NavigationLink(destination: ColorQuestionView()){
-                        Text("Party")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.occasion = OccasionType.party
                         print("HELLO party")

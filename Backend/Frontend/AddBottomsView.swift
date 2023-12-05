@@ -20,10 +20,16 @@ struct AddBottomsView: View {
                 
                 Button("Pants"){
                     pantsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
+                
                 if pantsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Pants")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.pants
                         print("HELLO pants")
@@ -32,10 +38,15 @@ struct AddBottomsView: View {
                 
                 Button("Jeans"){
                     jeansButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if jeansButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Jeans")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.jeans
                         print("HELLO jeans")
@@ -44,10 +55,15 @@ struct AddBottomsView: View {
                 
                 Button("Shorts"){
                     shortsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if shortsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Shorts")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.shorts
                         print("HELLO shorts")
@@ -56,10 +72,15 @@ struct AddBottomsView: View {
                 
                 Button("Short Skirts"){
                     shortSkirtsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if shortSkirtsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Short Skirts")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.shortskirt
                         print("HELLO short skirts")
@@ -68,10 +89,15 @@ struct AddBottomsView: View {
                 
                 Button("Long Skirts"){
                     longSkirtsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if longSkirtsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Long Skirts")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.longskirt
                         print("HELLO long skirts")

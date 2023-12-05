@@ -16,10 +16,15 @@ struct AddOuterwearView: View {
                 
                 Button("Jackets"){
                     jacketsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if jacketsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Jackets")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.jacket
                         print("HELLO jackets")
@@ -28,10 +33,15 @@ struct AddOuterwearView: View {
                 
                 Button("Coats"){
                     coatsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if coatsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Coats")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.coat
                         print("HELLO coats")
@@ -40,10 +50,15 @@ struct AddOuterwearView: View {
                 
                 Button("Vests"){
                     vestsButton.toggle()
-                }
+                }.padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
                 if vestsButton{
                     NavigationLink(destination: SeasonQuestionView()){
-                        Text("Vests")
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30, weight: .bold))
                     }.task {
                         newClothingItem.closetObject.clothing = ClothingType.vests
                         print("HELLO vests")
