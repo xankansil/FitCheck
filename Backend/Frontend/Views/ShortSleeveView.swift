@@ -29,8 +29,10 @@ struct ShortSleeveView: View {
                         ForEach(shortsleeves, id:\.id) { item in
                             if (item.img_url != nil){
                                 Image(uiImage: UIImage(named: item.img_url!)!)
-                                    .scaledToFit()
+                                    .resizable()
                                     .frame(width: 200, height: 200)
+                                    .aspectRatio(contentMode: .fit)
+                                    .scaledToFit()
                             } else{
                                 Text("image url not found")
                             }

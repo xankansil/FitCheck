@@ -795,7 +795,7 @@ final class UserManager {
                                                     img_url: "longsleeve image.jpg")
          */
         
-        // Testing queries on clothingItems
+        /*
         let clothingQuery = closetRef.whereField("color", isEqualTo: "red")
         let justReds = try await getClothingItems(userID: userID, query: clothingQuery)
         
@@ -812,6 +812,7 @@ final class UserManager {
         
         // Testing getting a single clothing item
         let testItem = try await getClothingItem(userID: userID, clothingID: clothingList1[0])
+         */
         
         /*// Adding outfit directly to the databse (must set id to "tempID" so we can update it in the function)
         let dummyOutfit1 = Outfit(
@@ -843,6 +844,7 @@ final class UserManager {
          */
         
         // Testing getting outfits
+        /*
         let allOutfits = try await getAllOutfits(userID: userID)
         // Example of getting a list of clothingItems from an outfit's clothing ids
         let firstOutfitClothes = try await clothingIDstoClothingItems(userID: userID, ids: allOutfits[0].fit_pieces!)
@@ -850,6 +852,7 @@ final class UserManager {
         // Example of using outfit queries
         let outfitQuery = outfitsRef.whereField("fit_colors", arrayContainsAny: ["multicolor"])
         let multicolorOutfits = try await getOutfits(userID: userID, query: outfitQuery)
+         */
         
         // Testing adding a piece to an outfit (will not add repeats)
         /*
