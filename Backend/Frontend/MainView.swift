@@ -12,8 +12,8 @@ struct MainView: View {
     //this envirnmental object is being initiallized in Clothing Object, this variable is an array with the name closet
    // @EnvironmentObject var closet: ClothingObject
     var body: some View {
-        @State private var selection = 2
-        TabView(selection:$selection) {
+       // @State private var selection = 2
+        TabView {
             FeedView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
