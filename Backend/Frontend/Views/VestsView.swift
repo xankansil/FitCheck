@@ -26,12 +26,14 @@ struct VestsView: View {
                         // Image(uiImage: UIImage(named: "shirt1")!)
                         // .scaledToFit()
                         ForEach(vests, id:\.id) { item in
-                            if (item.img_url != nil){
-                                Image(uiImage: UIImage(named: item.img_url!)!)
-                                    .resizable()
-                                    .frame(width: 200, height: 200)
-                                    .aspectRatio(contentMode: .fit)
-                                    .scaledToFit()
+                            if (item.img_url != nil) {
+                                if let uiimg = UIImage(named: item.img_url!){
+                                    Image(uiImage: uiimg)
+                                        .resizable()
+                                        .frame(width: 200, height: 200)
+                                        .aspectRatio(contentMode: .fit)
+                                        .scaledToFit()
+                                }
                             } else{
                                 Text("image url not found")
                             }

@@ -28,11 +28,13 @@ struct CardiganView: View {
                         // .scaledToFit()
                         ForEach(cardigan, id:\.id) { item in
                             if (item.img_url != nil){
-                                Image(uiImage: UIImage(named: item.img_url!)!)
-                                    .resizable()
-                                    .frame(width: 200, height: 200)
-                                    .aspectRatio(contentMode: .fit)
-                                    .scaledToFit()
+                                if let uiimg = UIImage(named: item.img_url!){
+                                    Image(uiImage: uiimg)
+                                        .resizable()
+                                        .frame(width: 200, height: 200)
+                                        .aspectRatio(contentMode: .fit)
+                                        .scaledToFit()
+                                }
                             } else{
                                 Text("image url not found")
                             }
