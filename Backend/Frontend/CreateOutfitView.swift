@@ -33,12 +33,14 @@ struct CreateOutfitView: View {
                                             //Text(item1.img_url!)
                                             //let item1Url = "Views/assets/" + item1.img_url!
                                             
-                                             Image(uiImage: UIImage(named: item1.img_url!)!)
-                                             .resizable()
-                                             .scaledToFit()
-                                             .frame(width: 200, height: 200)
-                                             
-                                            
+                                            // Important change - checking if UIIImage is nil before use!
+                                            // TODO: correct this in all places
+                                            if let uiimg = UIImage(named: item1.img_url!){
+                                                Image(uiImage: uiimg)
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 200, height: 200)
+                                            }
                                         } else{
                                             Text("image url not found")
                                         }
@@ -52,12 +54,12 @@ struct CreateOutfitView: View {
                                            // Text(item2.img_url!)
                                             //let item1Url = "Views/assets/" + item1.img_url!
                                             
-                                             Image(uiImage: UIImage(named: item2.img_url!)!)
-                                             .resizable()
-                                             .scaledToFit()
-                                             .frame(width: 200, height: 200)
-                                             
-                                            
+                                            if let uiimg = UIImage(named: item2.img_url!){
+                                                Image(uiImage: uiimg)
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 200, height: 200)
+                                            }
                                         } else{
                                             Text("image url not found")
                                         }
@@ -71,11 +73,12 @@ struct CreateOutfitView: View {
                                             //Text(item3.img_url!)
                                             //let item1Url = "Views/assets/" + item1.img_url!
                                             
-                                             Image(uiImage: UIImage(named: item3.img_url!)!)
-                                             .resizable()
-                                             .scaledToFit()
-                                             .frame(width: 200, height: 200)
-                                            
+                                            if let uiimg = UIImage(named: item3.img_url!){
+                                                Image(uiImage: uiimg)
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 200, height: 200)
+                                            }
                                             
                                         } else{
                                             Text("image url not found")

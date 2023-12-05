@@ -33,10 +33,6 @@
 		421C7D502B1D3E7100B1143D /* blackJeans.png in Resources */ = {isa = PBXBuildFile; fileRef = 421C7D3D2B1D3E7100B1143D /* blackJeans.png */; };
 		421C7D512B1D3E7100B1143D /* blackPuffer.png in Resources */ = {isa = PBXBuildFile; fileRef = 421C7D3E2B1D3E7100B1143D /* blackPuffer.png */; };
 		421C7D522B1D3E7100B1143D /* redHat.png in Resources */ = {isa = PBXBuildFile; fileRef = 421C7D3F2B1D3E7100B1143D /* redHat.png */; };
-		421C7D572B1EAD0500B1143D /* outfit2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421C7D532B1EAD0500B1143D /* outfit2.jpg */; };
-		421C7D582B1EAD0500B1143D /* outfit3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421C7D542B1EAD0500B1143D /* outfit3.jpg */; };
-		421C7D592B1EAD0500B1143D /* outfit4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421C7D552B1EAD0500B1143D /* outfit4.jpg */; };
-		421C7D5A2B1EAD0500B1143D /* outfit5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421C7D562B1EAD0500B1143D /* outfit5.jpg */; };
 		732409AF2B18EBEF0056CA5D /* AddOuterwearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099A2B18EBEF0056CA5D /* AddOuterwearView.swift */; };
 		732409B12B18EBEF0056CA5D /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099C2B18EBEF0056CA5D /* SUImagePickerView.swift */; };
 		732409B22B18EBEF0056CA5D /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324099D2B18EBEF0056CA5D /* CameraView.swift */; };
@@ -252,6 +248,11 @@
 		0E2370102B1D332100B803BE /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				736D595F2B1EC8E000A206AB /* favOutfit.jpg */,
+				736D59602B1EC8E000A206AB /* outfit2.jpg */,
+				736D595D2B1EC8E000A206AB /* outfit3.jpg */,
+				736D595E2B1EC8E000A206AB /* outfit4.jpg */,
+				736D59612B1EC8E000A206AB /* outfit5.jpg */,
 				421C7D332B1D3E6E00B1143D /* blackDress.png */,
 				421C7D372B1D3E7000B1143D /* blackDressShoes.png */,
 				421C7D3D2B1D3E7100B1143D /* blackJeans.png */,
@@ -498,6 +499,8 @@
 			files = (
 				733C7EB72AE1DE7F00CAAAD0 /* Preview Assets.xcassets in Resources */,
 				421C7D4E2B1D3E7100B1143D /* whiteSneaker.png in Resources */,
+				736D59622B1EC8E000A206AB /* outfit3.jpg in Resources */,
+				736D59652B1EC8E000A206AB /* outfit2.jpg in Resources */,
 				421C7D402B1D3E7100B1143D /* blackSkirt.png in Resources */,
 				421C7D572B1EAD0500B1143D /* outfit2.jpg in Resources */,
 				733C7EB42AE1DE7F00CAAAD0 /* Assets.xcassets in Resources */,
@@ -521,6 +524,7 @@
 				421C7D4D2B1D3E7100B1143D /* greenCardigan.png in Resources */,
 				0E2370142B1D34A900B803BE /* shirt2.jpeg in Resources */,
 				421C7D412B1D3E7100B1143D /* blackVest.png in Resources */,
+				736D59632B1EC8E000A206AB /* outfit4.jpg in Resources */,
 				421C7D422B1D3E7100B1143D /* redTank.png in Resources */,
 				421C7D5A2B1EAD0500B1143D /* outfit5.jpg in Resources */,
 				421C7D4B2B1D3E7100B1143D /* whiteSkirt.png in Resources */,

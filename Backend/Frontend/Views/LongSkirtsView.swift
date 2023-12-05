@@ -25,9 +25,13 @@ struct LongSkirtsView: View {
                         // .scaledToFit()
                         ForEach(longskirts, id:\.id) { item in
                             if (item.img_url != nil){
-                                Image(uiImage: UIImage(named: item.img_url!)!)
-                                    .scaledToFit()
-                                    .frame(width: 200, height: 200)
+                                if let uiimg = UIImage(named: item.img_url!){
+                                    Image(uiImage: uiimg)
+                                        .resizable()
+                                        .frame(width: 200, height: 200)
+                                        .aspectRatio(contentMode: .fit)
+                                        .scaledToFit()
+                                }
                             } else{
                                 Text("image url not found")
                             }
