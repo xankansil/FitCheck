@@ -823,6 +823,12 @@ final class UserManager {
             most_rec_wear: Date())
         try await addOutfit(userID: userID, outfitData: dummyOutfit1)
         
+        var listOfItems: [ClothingItem] = []
+        
+        if let top2 {
+            listOfItems.append(top2)
+        }
+        
         // Adding outfit by supplying fields (don't need to set "tempID")
         let redBlueOutfit = try await addOutfit(userID: userID,
                                                 label: "reds and blues",

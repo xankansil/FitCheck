@@ -106,6 +106,8 @@
 		733C7EF52AE1E03E00CAAAD0 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 733C7EF42AE1E03E00CAAAD0 /* FirebaseStorageCombine-Community */; };
 		735FC4102AF3E9D700487DD3 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FC40F2AF3E9D700487DD3 /* UserInfo.swift */; };
 		735FC4122AF3EC7400487DD3 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FC4112AF3EC7400487DD3 /* TopView.swift */; };
+		7371DA402B1E9C81003F4C4D /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371DA3F2B1E9C81003F4C4D /* PhotoPicker.swift */; };
+		7371DA422B1E9CDF003F4C4D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371DA412B1E9CDF003F4C4D /* StorageManager.swift */; };
 		737C7D9D2AF9E2AB00B67F0D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C7D9C2AF9E2AB00B67F0D /* UserManager.swift */; };
 		738DA4472AF15B490035117C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DA4462AF15B490035117C /* HomeView.swift */; };
 		738DA4492AF16D400035117C /* CreateAcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DA4482AF16D400035117C /* CreateAcc.swift */; };
@@ -190,6 +192,8 @@
 		734D9BD42AFD30E3003A39D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		735FC40F2AF3E9D700487DD3 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		735FC4112AF3EC7400487DD3 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		7371DA3F2B1E9C81003F4C4D /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		7371DA412B1E9CDF003F4C4D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		737C7D9C2AF9E2AB00B67F0D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		738DA4462AF15B490035117C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		738DA4482AF16D400035117C /* CreateAcc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcc.swift; sourceTree = "<group>"; };
@@ -320,6 +324,7 @@
 				732409D22B18EC1E0056CA5D /* SweaterView.swift */,
 				732409D52B18EC1E0056CA5D /* TankTopView.swift */,
 				732409D62B18EC1E0056CA5D /* VestsView.swift */,
+				7371DA3F2B1E9C81003F4C4D /* PhotoPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 				735FC40F2AF3E9D700487DD3 /* UserInfo.swift */,
 				0E3B691E2B1A6C4700847BB4 /* ClothingObject.swift */,
 				735FC4112AF3EC7400487DD3 /* TopView.swift */,
+				7371DA412B1E9CDF003F4C4D /* StorageManager.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -521,6 +527,7 @@
 				732409EC2B18EC1E0056CA5D /* ShortSleeveView.swift in Sources */,
 				732409EB2B18EC1E0056CA5D /* PantsView.swift in Sources */,
 				738DA4472AF15B490035117C /* HomeView.swift in Sources */,
+				7371DA422B1E9CDF003F4C4D /* StorageManager.swift in Sources */,
 				732409E52B18EC1E0056CA5D /* JumpSuitView.swift in Sources */,
 				732409DF2B18EC1E0056CA5D /* CoatsView.swift in Sources */,
 				732409E02B18EC1E0056CA5D /* ScarfsView.swift in Sources */,
@@ -540,6 +547,7 @@
 				733C7EB22AE1DE7E00CAAAD0 /* ContentView.swift in Sources */,
 				735FC4122AF3EC7400487DD3 /* TopView.swift in Sources */,
 				732409DD2B18EC1E0056CA5D /* HatsView.swift in Sources */,
+				7371DA402B1E9C81003F4C4D /* PhotoPicker.swift in Sources */,
 				732409BC2B18EBEF0056CA5D /* MainView.swift in Sources */,
 				735FC4102AF3E9D700487DD3 /* UserInfo.swift in Sources */,
 				732409E32B18EC1E0056CA5D /* ShortsView.swift in Sources */,
