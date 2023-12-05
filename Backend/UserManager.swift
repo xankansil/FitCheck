@@ -693,6 +693,35 @@ final class UserManager {
             img_url: "whiteSneaker"
         )
         try await addClothingItem(userID: userID, clothingData: dummyItem21)
+        
+        
+        let outFitList1: [ClothingItem] = [dummyItem21, dummyItem11, dummyItem5]
+        let dummyOutfit1 = Outfit(
+            id: "tempID",
+                label: "New Outfit Number 1",
+                fit_pieces: clothingItemsToIDs(items: outFitList1),
+                fit_colors: [ColorType.yellow, ColorType.black],
+                occasion: OccasionType.casual,
+                favorite: false,
+                date_added: Date(),
+                most_rec_wear: Date(),
+                img_url: "outfit2"
+            )
+        try await addOutfit(userID: userID, outfitData: dummyOutfit1)
+        
+        let outFitList2: [ClothingItem] = [dummyItem3, dummyItem10, dummyItem20]
+        let dummyOutfit2 = Outfit(
+            id: "tempID",
+                label: "New Outfit Number 2",
+                fit_pieces: clothingItemsToIDs(items: outFitList2),
+                fit_colors: [ColorType.black, ColorType.red],
+                occasion: OccasionType.fancy,
+                favorite: true,
+                date_added: Date(),
+                most_rec_wear: Date(),
+                img_url: "favOutfit"
+            )
+        try await addOutfit(userID: userID, outfitData: dummyOutfit2)
       
        
 
