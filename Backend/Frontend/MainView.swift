@@ -12,32 +12,33 @@ struct MainView: View {
     //this envirnmental object is being initiallized in Clothing Object, this variable is an array with the name closet
    // @EnvironmentObject var closet: ClothingObject
     var body: some View {
-        TabView {
+        @State private var selection = 2
+        TabView(selection:$selection) {
             FeedView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
-                }
+                }.tag(1)
 
             // consider newClothingwhatever: ClothingObject()
             AddClothingView().environmentObject(ClothingObject())
                 .tabItem {
                     Label("Add \nClothing", systemImage: "tshirt.fill")
-                }
+                }.tag(2)
             
             CreateOutfitView()
                 .tabItem {
                     Label("Create \nan Outfit", systemImage: "plus.circle.fill")
-                }
+                }.tag(3)
                 
             ClosetView()
                 .tabItem {
                     Label("Closet", systemImage: "list.dash")
-                }
+                }.tag(4)
             
             AccountView()
                 .tabItem { 
-                    Label("Account", systemImage: "person.fill")
-                }
+                    Label("Profile", systemImage: "person.fill")
+                }.tag(5)
         }
     }
 }
