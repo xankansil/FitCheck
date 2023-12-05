@@ -37,7 +37,7 @@ struct ColorQuestionView: View {
                     redButton.toggle()
                 }
                 if redButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Red")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.red
@@ -49,7 +49,7 @@ struct ColorQuestionView: View {
                     orangeButton.toggle()
                 }
                 if orangeButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Orange")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.orange
@@ -61,7 +61,7 @@ struct ColorQuestionView: View {
                     yellowButton.toggle()
                 }
                 if yellowButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Yellow")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.yellow
@@ -73,7 +73,7 @@ struct ColorQuestionView: View {
                     greenButton.toggle()
                 }
                 if greenButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Green")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.green
@@ -85,7 +85,7 @@ struct ColorQuestionView: View {
                     blueButton.toggle()
                 }
                 if blueButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Blue")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.blue
@@ -97,7 +97,7 @@ struct ColorQuestionView: View {
                     purpleButton.toggle()
                 }
                 if purpleButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Purple")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.purple
@@ -109,7 +109,7 @@ struct ColorQuestionView: View {
                     pinkButton.toggle()
                 }
                 if pinkButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Pink")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.pink
@@ -121,7 +121,7 @@ struct ColorQuestionView: View {
                     blackButton.toggle()
                 }
                 if blackButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Black")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.black
@@ -133,7 +133,7 @@ struct ColorQuestionView: View {
                     whiteButton.toggle()
                 }
                 if whiteButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("White")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.white
@@ -145,7 +145,7 @@ struct ColorQuestionView: View {
                     brownButton.toggle()
                 }
                 if brownButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Brown")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.brown
@@ -157,7 +157,7 @@ struct ColorQuestionView: View {
                     multicolorButton.toggle()
                 }
                 if multicolorButton{
-                    NavigationLink(destination: CameraView()){
+                    NavigationLink(destination: PhotoPicker()){
                         Text("Multi Color")
                     }.task {
                         newClothingItem.closetObject.color = ColorType.multicolor
