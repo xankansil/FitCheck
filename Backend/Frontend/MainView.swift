@@ -13,7 +13,7 @@ struct MainView: View {
    // @EnvironmentObject var closet: ClothingObject
     var body: some View {
         @State private var selection = 2
-        TabView(selection:$selection) {
+        TabView {
             FeedView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
