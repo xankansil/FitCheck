@@ -24,4 +24,4 @@ The **home feed** screen displays what a user's favorite outfits are. The feed s
 
 
 ### Features 
-Our app uses a Google Firebase as the server connection. The user's account information as well as closet information is stored on there. The closet data pulls from the datbase of clothing items. Our system uses a file called UserManager to navigate between the database and the views. 
+Our app uses a Google Firebase as the server connection. The user's account information as well as closet information is stored on there. The closet data pulls from the datbase of clothing items. Our system uses a file called UserManager to navigate between the database and the views. We have another file called StorageManager for managing images from the database.
