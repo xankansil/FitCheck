@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 import PhotosUI
 
-// TODO: correct other views that called this one
-// TODO: display a Vstack of all images from a list of uhhh things. uhh. things. clothing items. yeah that one.
+// TODO: correct other views that called this one   (DONE!)
+// TODO: display a Vstack of all images from a list
 
 struct PhotoPicker: View {
     @EnvironmentObject var newClothingItem : ClothingObject
@@ -51,11 +51,12 @@ struct PhotoPicker: View {
         
         // Displaying the test image
         if let imageData, let image = UIImage(data: imageData) {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 150, height: 150)
-                .cornerRadius(10)
+            // This is a test image from the database! Does not need to be in final app
+//            Image(uiImage: image)
+//                .resizable()
+//                .scaledToFit()
+//                .frame(width: 150, height: 150)
+//                .cornerRadius(10)
         }
     }
 }

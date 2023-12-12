@@ -5,84 +5,6 @@
 //  Created by John + Sean on 11/6/23.
 //
 
-// Commit
-// TODO: sync string IDs with real, auto-generated IDs from firestore. - EDIT: try using documentID...? set this upon creation...?  (DONE!)
-// TODO: standardize custom enum names (with "Type")    (DONE!)
-// TODO: encode dummy clothing items and dummy outfit items!    (DONE!)
-// TODO: make datecreated and mostrecwear an actual date    (DONE!)
-// TODO: create real custom weather enum?  (DONE!)
-// TODO: actually add user date created field so we can sort on firestore view  (DONE!)
-// TODO: test reading and writing with multiple clothing items  (DONE!)
-// TODO: update explanation of dataflow with new paradigm now that objects can be added directly to database (DONE!)
-// TODO: successfully read clothing item values from database into arrays of APP-USABLE structs!    (DONE!)
-// TODO: finalize "getAllClothingItems" function    (DONE!)
-// TODO: see if the raw data vs enum issue was causing the earlier filtering function to break  (DONE!)
-// TODO: compound queries (could send as a list or could actually let you pass the query... object?)    (DONE!)
-// TODO: add a custom "QueryType" enum for use of more versatile filtering when searching   (DONE!)
-// TODO: add search features by category! also maybe we really could just do a direct-to-DB dataflow.   (DONE!)
-// TODO: add test filtering calls in createUser for different filtering requests    (DONE!)
-// TODO: update examples at the head of this doc for filtering requests on clothing items (use real test cases) (DONE!)
-// TODO: make standardized "create clothing item" function with optional parameters (and test in dummyvalues)   (DONE!)
-// TODO: create codable / decodable structs for outfits like clothing info (use Corinna's outfit class as reference)    (DONE!)
-// TODO: modify the clothingItem struct to have both super and subcategories (clothingCategory and clothingType)    (DONE!)
-// TODO: remove alternate commented code (can be found in earlier pushes on github) (DONE!)
-// TODO: successfully add dummy outfits to database using the "get all" and filtered clothing methods   (DONE!)
-// TODO: create standardized "create outfit" function taking a list of clothingItem ids as input    (DONE!)
-// TODO: successfully read an outfit from the database into the in-app outfit struct    (DONE!)
-// TODO: also create a function that converts a list of clothingItems to a list of Ids  (DONE!)
-// TODO: remove id-setting altogether in favor of the addClothingItem and addOutfit methods adding it properly  (DONE!)
-// TODO: create a function for getting a list of actual clothingitems from a list of ids (like in an outfit)    (DONE!)
-// TODO: make addOutfit alternate method that take fields rather than proper data   (DONE!)
-// TODO: make addClothingItem alternate method that take fields rather than proper data (DONE!)
-// TODO: large refactor using utility methods   (DONE!)
-// TODO: fix swiftvalue bug to successully create an outfit query, and add example code (DONE!)
-// TODO: update examples code to only have field-based versions of the addClothingItem and addOutfit methods    (DONE!)
-// TODO: example of getClothingItems where you want to get all the clothingItems from a given outfit    (DONE!)
-// TODO: add single "getClothingItem" and "getOutfit" functions based on ids    (DONE!)
-// TODO: add "addClothingToOutfit" function (DONE!)
-// TODO: add "removeClothingItemFromOutfit" function    (DONE!)
-// TODO: deleteClothing function that also removes all instances of that item from all outfits  (DONE!)
-// TODO: deleteOutfit function  (DONE!)
-// TODO: create codable struct for userdata (DONE!)
-// TODO: edit createUser to use the proper userdata struct  (DONE!)
-// TODO: standardize confusing loginInfo / userManager userID struct discrepancies within UserManager   (DONE!)
-// TODO: successfully read userdata into proper app-usable struct   (DONE!)
-// TODO: Add favorite bool to clothingItem  (DONE!)
-
-// In-Progress
-// TODO: potential huge problem w/ getLoadedData async workaround currently in place
-// TODO: add img_url fields to all structs  (Done!)
-// TODO: favorite clothes and favorite shoes in profile
-// TODO: deleteUser function and deleteAllUsers that works for both firestore and authentication database (john help pls)
-// TODO: make it so deleteUser sets you back to the login view (frontend help pls)
-
-// Next
-// TODO: get rid of obsolete stuff in the dummydata method to avoid confusion
-
-// Upcoming
-// TODO: IMAGE STORAGE on firebase as part of a clothing item / outfit. (requires creation of a new database)
-// TODO: Investigate this and official docs https://www.youtube.com/watch?v=sTiD8a9sBWw
-// TODO: Successfully store photos on database
-// TODO: Add img_path optional fields to all three structs: user (profile pic), clothing item and outfit (social media)
-// TODO: Delete calls successfully also remove images from the storage database
-
-// Important but save for later
-// TODO: remove front end versions of duplicate clothing + outfit structs (located in frontend files)
-// TODO: make it so frontend and backend can access the same clothingItem / Outfit / UserData structs (from this file)
-// TODO: add optionals everywhere so invalid data doesn't crash the app (kind of a biggie but really hard to test)
-
-// Housekeeping
-// TODO: remove dummyData call in createUser for final version -> massively reduce createUser overhead!
-// TODO: test that the lack of dummy init doesn't break anything - all frontend views must work on zero clothing / outfit data
-
-// Less pertinent:
-// TODO: dummy social media view = basically just a global outfit view for now (proof of concept - shows that you CAN see other user data)
-// TODO: paginating queries (maybe for global feed lol) https://cloud.google.com/firestore/docs/query-data/query-cursors#paginate_a_query
-// TODO: do we want multiple closets...? (why would you even say such a thing)
-// TODO: fix the annoying warnings of incompatible constraints on the createUser view
-// TODO: make it so that by default, an outfits colors array field is generated by the colors of its clothingItems
-// TODO: fields-based updatClothingItem and updateOutfit options (putting on hold unless we add edit functionality)
-
 /*
  EXPLANATION OF DATA FLOW:
  -Frontend will rely on UserManager functions to access and manage user data, closet, and outfits
@@ -309,55 +231,6 @@ final class UserManager {
     
     // Examples for creating data for a new user
     func createDummyData(userID: String) async throws {
-//        // Use "tempID" so that we can track it down to give each item a proper id (auto-generated from firestore)
-//        let dummyItem1 = ClothingItem(
-//            id: "tempID",
-//            color: ColorType.black,
-//            category: CategoryType.fullbody,
-//            clothing: ClothingType.dress,
-//            occasion: OccasionType.casual,
-//            weather: WeatherType.winter,
-//            date_added: Date(),
-//            most_rec_wear: Date(),
-//            times_worn: 0,
-//            favorite: false)
-//
-//        let dummyItem2 = ClothingItem(
-//            id: "tempID",
-//            color: ColorType.red,
-//            category: CategoryType.accessory,
-//            clothing: ClothingType.hat,
-//            occasion: OccasionType.party,
-//            weather: WeatherType.summer,
-//            date_added: Date(),
-//            most_rec_wear: Date(),
-//            times_worn: 0,
-//            favorite: false)
-//
-//        let dummyItem3 = ClothingItem(
-//            id: "tempID",
-//            color: ColorType.red,
-//            category: CategoryType.fullbody,
-//            clothing: ClothingType.dress,
-//            occasion: OccasionType.casual,
-//            weather: WeatherType.winter,
-//            date_added: Date(),
-//            most_rec_wear: Date(),
-//            times_worn: 0,
-//            favorite: false)
-//
-//        let dummyItem4 = ClothingItem(
-//            id: "tempID",
-//            color: ColorType.blue,
-//            category: CategoryType.fullbody,
-//            clothing: ClothingType.dress,
-//            occasion: OccasionType.casual,
-//            weather: WeatherType.winter,
-//            date_added: Date(),
-//            most_rec_wear: Date(),
-//            times_worn: 1,
-//            favorite: false)
-        
         let dummyItem1 = ClothingItem(
             id: "tempID",
             color: ColorType.white,
@@ -722,59 +595,14 @@ final class UserManager {
                 img_url: "favOutfit"
             )
         try await addOutfit(userID: userID, outfitData: dummyOutfit2)
-      
-       
-
-//
-//        // Add items per their data
-//        try closetRef.addDocument(from: dummyItem1)
-//        try closetRef.addDocument(from: dummyItem2)
-//        try closetRef.addDocument(from: dummyItem3)
-//        try closetRef.addDocument(from: dummyItem4)
-//
-//        // Update the clothingIDs to be their real, firestore-given ids
-//        let closet = try await Firestore.firestore().collection("users").document(userID).collection("closet").whereField("id", isEqualTo: "tempID").getDocuments()
-//        for document in closet.documents {
-//            if document == document {
-//                let realID = document.documentID
-//                try await document.reference.updateData(["id" : realID])
-//            }
-//        }
-//        // Using explicit "addClothingItem" function (automatically generates appropriate IDs, still needs "tempID")
-//        let dummyItem5 = ClothingItem(
-//            id: "tempID",
-//            color: ColorType.blue,
-//            category: CategoryType.shoes,
-//            clothing: ClothingType.shoes,
-//            occasion: OccasionType.casual,
-//            weather: WeatherType.winter,
-//            date_added: Date(),
-//            most_rec_wear: Date(),
-//            times_worn: 1,
-//            favorite: false)
-//        
-//        let dummyItem = ClothingItem(
-//            id: "tempID",
-//            color: nil,
-//            category: nil,
-//            clothing: nil,
-//            occasion: nil,
-//            weather: nil,
-//            date_added: Date(),
-//            most_rec_wear: nil,
-//            times_worn: 0,
-//            favorite: false,
-//            img_url: nil
-//            )
-//        
-//        try await addClothingItem(userID: userID, clothingData: dummyItem5)
         
         // First get a reference to the closet / outfits for later use with queries
         let closetRef = closetRef(userID: userID)
         let outfitsRef = outfitsRef(userID: userID)
         
         // Using one-line, field-based version (best practice as there is no need to supply "tempID")
-       /* let partyShorts = try await addClothingItem(userID: userID,
+        /* 
+        let partyShorts = try await addClothingItem(userID: userID,
                                                     color: ColorType.green,
                                                     category: CategoryType.bottom,
                                                     clothing: ClothingType.shorts,
@@ -786,43 +614,6 @@ final class UserManager {
                                                     favorite: true,
                                                     img_url: "IMG_22K.jpg")
         */
-        
-        let partyShirt = try await addClothingItem(userID: userID,
-                                                    color: ColorType.green,
-                                                    category: CategoryType.top,
-                                                    clothing: ClothingType.shortsleeve,
-                                                    occasion: OccasionType.holiday,
-                                                    weather: WeatherType.winter,
-                                                    dateAdded: Date(),
-                                                    mostRecWear: Date(),
-                                                    timesWorn: 10,
-                                                    favorite: false,
-                                                    img_url: "shirt1")
-        
-        let top1 = try await addClothingItem(userID: userID,
-                                                    color: ColorType.green,
-                                                    category: CategoryType.top,
-                                                    clothing: ClothingType.shortsleeve,
-                                                    occasion: OccasionType.holiday,
-                                                    weather: WeatherType.winter,
-                                                    dateAdded: Date(),
-                                                    mostRecWear: Date(),
-                                                    timesWorn: 10,
-                                                    favorite: false,
-                                                    img_url: "shirt2")
-        
-        /*let top2 = try await addClothingItem(userID: userID,
-                                                    color: ColorType.green,
-                                                    category: CategoryType.top,
-                                                    clothing: ClothingType.longsleeve,
-                                                    occasion: OccasionType.holiday,
-                                                    weather: WeatherType.winter,
-                                                    dateAdded: Date(),
-                                                    mostRecWear: Date(),
-                                                    timesWorn: 10,
-                                                    favorite: true,
-                                                    img_url: "longsleeve image.jpg")
-         */
         
         /*
         let clothingQuery = closetRef.whereField("color", isEqualTo: "red")
